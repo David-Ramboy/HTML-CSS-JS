@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function meditate(){
+        //     console.log("Everything is object.....");
+        // }
+        // // alert(meditate instanceof Object);
+
+        // var bryan ={
+        //     name:"david",
+        //     age:22,
+        //     birth:1999
+        // }
+
+        // function clr(o){
+        //     var al = [];
+        //     var i = 0;
+        //     for(var k in o){
+        //         console.log(o[k])
+        //         al[i] = 0;
+        //         i++;
+        //     }
+        //     return al;
+        // }
+
+        // console.log(Object.keys(bryan).length);
+
+        // // var l = "hhhh"
+
+        // // l.length;
+
+        // var ER_Main={
+        //     now: new Date(),
+        //     //other globals here
+        // }
+        // console.log("This is " + ER_Main.now)
+
+        // ------------------------------------ ASI -----------------------------------------//
+
+        // EXAMPLE
+        const sum = 5 + 5
+        (sum).toFixed(3)
+
+        // Is interpreted as:
+        const sum = 5 + 5(sum).toFixed(3);
+        // ReferenceError: Cannot access 'sum' before initialization
+
+        // JavaScript parser basically assumes
+        // that what we want to do is a function call
+        // i.e.: 5(sum), calling function 5 with parameter sum
+
+
+        // FIX:
+        const sum = 5 + 5;
+        (sum).toFixed(3)
+
+        // Is interpreted as:
+        const sum = 5 + 5;
+        sum.toFixed(3);
+
+
+        // Or
+        // EXAMPLE
+        const mishmash = 13 + 'world'
+
+        [13].length
+        // TypeError: Cannot read property 'length' of undefined
+
+        // Is interpreted as:
+        const mishmash = 13 + 'world'[13].length;
+
+        // JavaScript parser basically assumes
+        // that we want to know the length of character on 12th index
+
+
+        // FIX:
+        const mishmash = 13 + 'world';
+
+        [13].length
+        // ;[13].length <= or add a semicolon before opening bracket
+
+        // Is interpreted as:
+        const mishmash = 13 + 'world';
+
+        [13].length;
+
+
+        // Or
+        // EXAMPLE
+        const mishmash = 13 + 'world'
+
+        ([13].length)
+        // TypeError: "world" is not a function
+
+        // Is interpreted as:
+        const mishmash = 13 + 'world'([13].length)
+
+
+        // FIX:
+        const mishmash = 13 + 'world'; // <= Add semicolon here
+
+        ([13].length)
+        // ;([13].length) <= or add a semicolon before opening parenthesis
+
+        // Is interpreted as:
+        const mishmash = 13 + 'world';
+        ([13].length);
+
+            //------------- in curly braces--------------/
+            // This is not valid, but ASI will intervene nonetheless
+
+            { 0 
+                2} 8
+
+            // Is interpreted as:
+            { 0;
+            2; } 8;
+
+            // Or, a valid example where ASI will also intervene
+            { foo: 'barr' }
+
+            // Is interpreted as:
+            { foo: 'barr'; }
+    </script>
+</body>
+</html>

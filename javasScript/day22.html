@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var ships = [{ locations: ["31", "41", "51"], hits: ["", "", ""] },
+        //              { locations: ["14", "24", "34"], hits: ["", "hit", ""] },
+        //              { locations: ["00", "01", "02"], hits: ["hit", "", ""] }];
+        //             // Finish this code to access the second ship's middle location and print its value with console.log.
+        //             var ship2 = ships[1];
+        //             console.log(ship2)
+        //             var locations = ship2.locations;
+        //             console.log("Location is " + locations[1]);
+        //             // Finish this code to see if the third ship has a hit in its first location
+        //             var ship3 = ships[2];
+        //             var hits = ship3.hits;
+        //             if(hits[0] === "hit"){
+        //                 console.log("Ouch, hit on third ship at location one");
+        //             }
+        //             //Finish this code to hit the first ship at the third location
+        //             var ship1 = ships[0];
+        //             var hits = ship1.hits;
+        //             hits[2] = "hit";
+        //             console.log(ships[0])
+
+        function nextInLine(arr, item) {
+  // Only change code below this line
+  if(item == 6){
+
+    return item;    
+  }
+  if(item == 1){
+      item = 2
+      return item;
+  }
+  if(item == 1){
+      item = 5
+      return item;
+  }
+  
+  // Only change code above this line
+}
+
+// Setup
+const testArr = [1, 2, 3, 4, 5];
+
+// Display code
+console.log("Before: " + JSON.stringify(testArr));
+console.log(nextInLine(testArr, 6));
+console.log(nextInLine([2], 1));
+console.log(nextInLine([5,6,7,8,9], 1));
+console.log("After: " + JSON.stringify(testArr));
+        
+        
+    </script>
+</body>
+</html>

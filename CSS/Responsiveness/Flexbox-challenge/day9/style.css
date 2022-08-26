@@ -1,0 +1,101 @@
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+html{
+    box-sizing: border-box;
+
+}
+body{
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0;
+}
+.content > p{
+    margin-top: 3em;
+}
+.content > h1{
+    margin-top: 0;
+}
+img{
+    max-width: 100%;
+}
+li, li > a:link{
+    list-style: none;
+    text-decoration: none; 
+}
+header{
+    padding: .3em 0;
+}
+.nav{
+    display: flex;
+}
+.nav-bar{
+    border: 2px solid orange;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-list{
+    display: flex;
+    border: orangered 2px solid;
+    margin: 0;
+    padding: .1em 0;
+}
+.nav-item + .nav-item{
+    margin-left:.2em;
+}
+.container{
+    padding: 100px 0;
+    background-color: rgb(111, 163, 180);
+}
+.inner-container{
+    border: 1px solid black;
+  
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+ 
+}
+.btn{
+    display: inline-block;
+    
+    margin: 3em 0em;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+ 
+}
+.img > img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.img{
+    width: 32%;
+    align-self: flex-start;
+    border: 1px solid black;
+}
+.content{
+    width: 62%;
+    border: 1px solid black;
+    
+}
+/* section 2 */
+.section-2{
+    display: flex;
+    padding: 50px 0;
+    border: 1px solid black;
+justify-content: space-between;
+}
+.two-col{
+    width: 62%;
+    border: 1px solid black;
+
+}
+.three-col{
+    width: 32%;
+    border: 1px solid black;
+    background-color: rgb(111, 163, 180);
+    text-align: center;
+    padding: 0 10px;
+}

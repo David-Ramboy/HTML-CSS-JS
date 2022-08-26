@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // // object name is flat also known object declaration
+        // var fiat = {
+        //     // this is where properties of object consist of property name and property value
+        // //  name:value
+        //     make:"Fiat",
+        //     model:"500",
+        //     year:1957,
+        //     color:"Medium Blue",
+        //     passengers:2,
+        //     convertible: false,
+        //     mileage: 88000  
+        // };
+        // var miles = fiat.mileage;  // dot (.) notation give you access to an object's properties.
+        // if(miles < 2000){
+        //     buyIt();
+        // }
+        // // adding new property
+        // fiat.needsWashing = true;
+        // // using it to compute
+        // if(fiat.year < 1965){
+        //     classic = true;
+        // }
+        // for(i = 0; i < fiat.passengers; i++){
+        //     addPersonToCar();
+        // }
+        //=====================
+        // var dog = {
+        //     name:"fido",
+        //     weight: 20.2,
+        //     age: 4,
+        //     breed:"mixed",
+        //     activity:"fetch balls"
+        // };
+        // var bark
+        // if(dog.weight > 20){
+        //     bark = "WOOF WOOF";
+        // } else {
+        //     bark = "woof woof";
+        // }
+        // var speak = dog.name +" says " + bark + " when he wants to " + dog.activity;
+        // console.log(dog);
+        // dog.height = 2; // add new property to the object
+        // // delete dog.weight; // delete the existing properties
+        // delete dog.height; // delete
+        // console.log(dog.weight)
+        // if(dog.weight > 10){
+        //     dog.speak = "english";
+        // }
+        // dog.speak = "japanese";
+        // ===============================
+        var car = {
+            mileage: 9000,
+            year:1940
+        };
+        function prequal(car){
+
+            if(car.mileage > 10000){
+                console.log("dontbuyit1")
+                return false;
+            } else if(car.year > 1960){
+                console.log("dontbuyit2")
+                return false;
+            }
+            console.log("buyit")
+            return true;
+        }
+        var testing = prequal(car);
+        console.log(testing);
+
+    </script>
+</body>
+</html>

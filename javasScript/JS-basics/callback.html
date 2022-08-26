@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div"></div>
+    <div id="div2"></div>
+    
+    <script>
+        // function Sequence
+        function myDisplayer(message){
+            document.getElementById("div").innerHTML = message
+            console.log(message)
+        }
+
+        function myFirst(){
+            myDisplayer("hello");
+        }
+
+        function mySecond(){
+            myDisplayer("Goodbye");
+        }
+        mySecond();
+        myFirst();
+
+        // Sequence Control
+
+        // function myDisplayer2(some){
+        //     document.getElementById("div2").innerHTML = some;
+        // }
+
+        // function myCalculator(num1, num2){
+        //     let sum = num1 + num2;
+        //     return sum;
+        // }
+
+        // let result = myCalculator(2,2)
+
+        // myDisplayer2(result);
+        // Callbacks
+
+        // function myDisplayer2(some){
+        //     document.getElementById("div2").innerHTML = some;
+        // }
+        
+        // function myCalculator(num1, num2, myCallback){
+        //     let sum = num1 + num2;
+        //     myCallback(sum);
+        // }
+
+        // myCalculator(3,3,myDisplayer2);
+        
+        function firstParag(callback, message){
+            console.log(message)
+            setTimeout(callback, 2000)
+        }
+        function seconParag(message){
+            console.log(message)
+        }
+
+        setTimeout(function(){firstParag(function(){seconParag("Im the second aragraph")},"Im the first paragraph")},5000)
+    </script>
+</body>
+</html>

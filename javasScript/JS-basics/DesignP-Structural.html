@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Developer(name){
+            this.name = name
+            this.type = "Developer"
+        }
+        function Tester(name){
+            this.name = name
+            this.type = "Tester"
+        }
+
+        function EmployeeFactory(){
+            this.create = function(name, type){
+                if(type == 1){
+                    return new Developer(name)
+                }else if(type == 2){
+                    return new Tester(name)
+                }
+            }
+        }
+
+        function says(){
+            console.log("Hi, Im " + this.name + " and I am a " + this.type)
+        }
+        
+        var employeeFactory = new EmployeeFactory()
+
+        var employees = []
+
+        var david = employeeFactory.create("David", 1);
+        var rick = employeeFactory.create("Rick", 2);
+
+        employees.push(david);
+        employees.push(rick);
+
+        employees.forEach(function(e){
+            console.log(e)
+        })
+
+        
+    </script>
+</body>
+</html>

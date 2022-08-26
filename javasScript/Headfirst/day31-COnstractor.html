@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function Cars(make, model, year, color, passenger, convertible, milleage, started){
+        //     this.make = make;
+        //     this.model = model;
+        //     this.year = year;
+        //     this.color = color;
+        //     this.passenger = passenger;
+        //     this.convertible = convertible;
+        //     this.milleage = milleage;
+        //     this.started = started;
+        //     this.start = function(){
+        //         this.started = true;
+        //         console.log("the engine start")
+        //     }
+        //     this.stop = function(){
+        //         this.started = false;
+        //         console.log("the engine stop")
+        //     }
+        //     this.drive = function(){
+        //         if(this.started){
+        //             console.log(this.make + " " + this.model + " goes zoom zoom!");
+        //         }else{
+        //             console.log("Start the engine first.");
+        //         }
+        //     }
+        // }
+        // var log = console.log
+        // var chevy = new Cars("Chevy","Bel Air", 1957, "red", 2, false, 1021, false);
+        // var fiat = new Cars("Fiat", "500", 1957, "Medium Blue", 2, false, 88000, false)
+        // var taxi = new Cars("Webville Motors", "Taxi", 1955, "yellow", 4, false, 281341, false);
+        // var cadi =new  Cars("GM", "Cardillac", 1955, "tan", 5, false, 12892, false)
+        
+        // var cars = [chevy, fiat, taxi, cadi];
+        // var i = cars.length;
+        // for(i--; 0 < i; i--){
+        //     var shuffle = Math.floor(Math.random() * (i + 1));
+
+        //     var temp = cars[shuffle];
+        //     cars[shuffle] = cars[i];
+        //     cars[i] = temp;
+        // }
+        // console.log(cars)
+        // for(var j = 0; j < cars.length; j++){
+        //     cars[j].start();
+        //     cars[j].drive();
+        //     cars[j].stop(); 
+        // }            
+
+        // Objects literals
+        // var chevyParam = {
+        //     make:"Chevy",
+        //     model:"Bel Air",
+        //     year:1957,
+        //     color:"red",
+        //     passenger:2, 
+        //     convertible:false,
+        //     milleage:1021,
+        //     started: false
+        // }
+        // var fiatParam = {
+        //     make:"Fiat",
+        //     model:"500",
+        //     year:1957,
+        //     color:"Medium Blue",
+        //     passenger:2, 
+        //     convertible:false,
+        //     milleage:88000,
+        //     started: false
+        // }
+        // var chevy = new Cars(chevyParam);
+        // // var fiat = new Cars("Fiat", "500", 1957, "Medium Blue", 2, false, 88000, false)
+        // var fiat = new Cars(fiatParam);
+        // var cars = [chevy, fiat]
+        // function Cars(Params){
+        //     this.make = Params.make;
+        //     this.model = Params.model;
+        //     this.year = Params.year;
+        //     this.color = Params.color;
+        //     this.passenger = Params.passenger;
+        //     this.convertible = Params.convertible;
+        //     this.milleage = Params.milleage;
+        //     this.started = Params.started;
+        //     this.start = function(){
+        //         this.started = true;
+        //         console.log("the engine start")
+        //     }
+        //     this.stop = function(){
+        //         this.started = false;
+        //         console.log("the engine stop")
+        //     }
+        //     this.drive = function(){
+        //         if(this.started){
+        //             console.log(this.make + " " + this.model + " goes zoom zoom!");
+        //         }else{
+        //             console.log("Start the engine first.");
+        //         }
+        //     }
+        // }
+        // for(var j = 0; j < cars.length; j++){
+        //     cars[j].start();
+        //     cars[j].drive();
+        //     cars[j].stop(); 
+        // }        
+        
+            // function shuffleArray(array){
+            //     var curId = array.length // 4
+            //     while(0 !== curId){ //5 //4
+            //         var randId = Math.floor(Math.random() * curId)
+            //         curId = curId - 1 // 4
+
+            //         var tmp = array[curId] // array[4]
+            //         array[curId] = array[randId]; // array[4] = array[random] // array[2] 
+            //         array[randId] = tmp // array[random] = array[4] // array[4] 
+            //     }
+            //     return array;
+            // }
+
+            // var arr = [1,2,3,4,5]
+            // shuffleArray(arr);
+            // console.log(arr);
+            // var limoParams = {
+            //     make:"Webville Motors",
+            //     model:"limo",
+            //     year:1983,
+            //     color:"black",
+            //     passengers:12,
+            //     convertible: true,
+            //     mileage: 21120
+            // };
+            // var limo = new Car(limoParams);
+            // var limoDog = new Dog("Rhapsody In Bluw", "Foodie", 40);
+            // function Car(params){
+            //     this.make = params.make;
+            //     this.model = params.model;
+            //     this.year = params.year;
+            //     this.color = params.color;
+            //     this.passengers = params.passengers;
+            //     this.convertible = params.convertible;
+            //     this.mileage = params.mileage;
+            // }
+            // function Dog(name, breed, weight){
+            //     this.name = name;
+            //     this.breed = breed;
+            //     this.weight = weight;
+            //     this.bark = function(){
+            //         if(this.weight > 25){
+            //             console.log(this.name + "WOOF!")
+            //         }else{
+            //             console.log(this.name + "yip!");
+            //         }
+            //     }
+            // }
+
+            // console.log(limo.make + " | " + limo.model+" | "+ typeof limo);
+            // console.log(limoDog.name + " | " + typeof limoDog)
+            // if(typeof limoDog === typeof limo){
+            //     console.log("true")
+            // }
+            // constructor
+        //     var ferariparam = {make: "Ferari", model: 2, mileage: 2000}
+        //     var cadiparam = {make:"GM", model: "Cardillac", year: 1955, color: "tan", passanger: 5,convertible: false, mileage: 12892, started: false}
+        //     var cadiparam2 = {make:"GM", model: "Cardillac", year: 1955, color: "tan", passanger: 5,convertible: false, mileage: 12892, started: false}
+        //     var cadi2 = new Cars2(cadiparam2)
+
+        //    var ferari =new Cars(ferariparam)
+        //     var cadi = new Cars(cadiparam)
+        //     function Cars(params){
+        //         this.make = params.make;
+        //         this.model = params.model;
+        //         this.year = params.year;
+        //         this.color = params.color
+        //         this.passanger = params.passanger;
+        //         this.convertible = params.convertible;
+        //         this.mileage = params.mileage;
+        //         this.started = params.started;
+        //     }
+        //     function Cars2(params){
+        //         this.make = params.make;
+        //         this.model = params.model;
+        //         this.year = params.year;
+        //         this.color = params.color
+        //         this.passanger = params.passanger;
+        //         this.convertible = params.convertible;
+        //         this.mileage = params.mileage;
+        //         this.started = params.started;
+        //     }
+        //     console.log(ferari , cadi)
+        //     if(cadi2 instanceof Cars2){
+        //         console.log("true! it's a car2")
+        //     }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+.container{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+#login-form{
+    border: 1px solid black;
+    width: 40%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+.login-btn{
+    position: absolute;
+    justify-self: flex-end;
+    border: 1px black solid;
+    bottom: 50px;
+}

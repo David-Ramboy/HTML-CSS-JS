@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function Robot(name, year, owner){
+        //     this.name = name;
+        //     this.year = year;
+        //     this.owner = owner;
+        // }
+
+        // Robot.prototype.maker = "ObjectsRUs";
+        // Robot.prototype.speak = function(){
+        //     console.log("speak one language")
+        // }
+        // Robot.prototype.makeCoffee = function(){
+        //      console.log("make 4 coffee")  
+        // }
+        // Robot.prototype.blinkLight = function(){
+
+        // }
+        // var robby =new Robot("Robby",1956,"Dr.Morbius");
+        // var rosie =new Robot("Rossie",1962,"George Jetson");
+
+        // robby.onOffSwitch = true;
+        // robby.makeCoffee = function(){
+        //     console.log("Starbucks");
+        // }
+        // rosie.cleanHouse = function(){
+        //     console.log("Clean House")
+        // }
+        // // chain prototype
+        // function SpaceRobot(name, year, owner, homePlanet){
+        //     this.name = name;
+        //     this.year = year;
+        //     this.owner = owner;
+        //     this.homePlanet = homePlanet;
+        // }
+
+        // SpaceRobot.prototype = new Robot();
+
+        // SpaceRobot.prototype.speak = function(){
+        //     console.log(this.name + " says Sir, if i may venture an opinion...");
+        // }
+
+        // SpaceRobot.prototype.pilot = function(){
+        //     console.log(this.name + " says Thrusters? Are they important?")
+        // }
+
+        // var c3po = new SpaceRobot("C3P0", 1997, "Luke Skywalker", "Tatooine");
+        // c3po.speak();
+        // c3po.pilot();
+        // console.log(c3po.name + " was made by " + c3po.maker);
+
+        // var simon = new SpaceRobot("Simon", 2009, "Carla Diana", "Earth");
+        // simon.makeCoffee();
+        // simon.blinkLight();
+        // simon.speak();
+
+        function Dog(name, breed,weight){
+            this.name = name;
+            this.breed = breed;
+            this.weight = weight;
+        }
+        Dog.prototype.species = "Cannine";
+        Dog.prototype.name = "boy"
+        Dog.prototype.bark = function(){
+            if(this.weight > 25){
+                console.log(this.name +" says WOOF!");
+            }else{
+                console.log(this.name +" says yip!");
+            }
+        }
+        Dog.prototype.run = function(){
+            console.log("Run!");
+        }
+        Dog.prototype.wag = function(){
+            console.log("Wag!")
+        }
+        Dog.prototype.sitting = false;
+        Dog.prototype.sit = function(){
+            if(this.sitting){
+                console.log(this.name + " is already sitting");
+            }else{
+                this.sitting = true;
+                console.log(this.name + " is now sitting");
+            }
+        }
+
+        var fido = new Dog("Fido","Mixed", 38);
+
+        if(fido instanceof Dog){
+            console.log(fido.name + " is a Dog ")
+        }
+        
+        if(fido instanceof ShowDog){
+            console.log(fido.name + " is a Show Dog ")
+        }
+
+        
+        var fluffy = new Dog("Fluffy","Foodle", 30);
+        var spot = new Dog("Spot","Chihuahua", 10);
+        spot.bark = function(){
+            console.log(this.name + " Woof!");
+        }
+        
+        function ShowDog(name, breed, weight, handler){
+            Dog.call(this, name, breed, weight)
+            this.handler = handler;
+        }
+
+        // ShowDog.prototype = new Dog();
+        ShowDog.prototype = Object.create(Dog.prototype)
+        ShowDog.prototype.constructor = ShowDog; // indicator
+
+        ShowDog.prototype.league = "Webville";
+
+        ShowDog.prototype.stack = function(){
+            console.log("Stack");
+        }
+
+        ShowDog.prototype.bait = function(){
+            console.log("Bait");
+        }
+
+        ShowDog.prototype.gait = function(kind){
+            console.log(kind + "ing");
+        }
+
+        ShowDog.prototype.groom = function(){
+            console.log("Groom");
+        }
+
+
+
+        var scotty = new ShowDog("Scotty", "Scottish Terrier", 15, "Cookie");
+         var beatrice = new ShowDog("Beatrice", "Pomeranian", 5, "Hamilton")
+        if(scotty instanceof Dog){
+            console.log(scotty.name + " is a Dog ")
+        }
+        
+        if(scotty instanceof ShowDog){
+            console.log(scotty.name + " is a Show Dog ")
+        }
+        console.log(scotty)
+        console.log("Scotty is construntor " + scotty.constructor);
+        console.log("fido is construntor " + fido.constructor);
+
+        fido.bark();
+        fluffy.bark();
+        spot.bark();
+        scotty.bark();
+        beatrice.bark();
+        scotty.gait("walk");
+        beatrice.groom();
+
+        console.log(scotty.species)
+        console.log(scotty)
+        console.log(scotty.name)
+
+
+        console.log(fido.name)
+    </script>
+</body>
+</html>

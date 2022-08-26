@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box-container {
+            background-color: grey;
+            height: 500px;
+            display: flex;
+            flex-wrap: wrap;
+            
+        }
+        #box-1{
+            background-color: blueviolet;
+            width: 25%;
+            height: 50%;
+        }
+        #box-2{
+            background-color: brown;
+            width: 25%;
+            height: 50%;
+        }
+        #box-3{
+            background-color: rgb(20, 131, 48);
+            width: 25%;
+            height: 50%;
+        }
+        #box-4{
+            background-color: rgb(19, 74, 100);
+            width: 25%;
+            height: 50%;
+        }
+        #box5{
+            background-color: rgb(138, 17, 63);
+            width: 25%;
+            height: 50%;
+        }
+        #box-6{
+            background-color: rgb(216, 198, 33);
+            width: 25%;
+            height: 50%;
+        }
+        .d1{background: lightgreen;}
+        .d2{background: lightblue;}
+        .d3{background: lightseagreen;}
+        .d4{background: lightskyblue;}
+        .d5{background: lightsalmon;}         
+
+        .container{
+            font-size: 20px;
+            min-height: 50px;
+            width:100%;
+            background: lightgray;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+            grid-template-rows: repeat(3, minmax(90px, 1fr));
+            grid-column-gap: 20px;
+            grid-row-gap: 10px;
+            grid-gap: 10px 20px;
+
+            grid-template-areas: 
+            "header header header"
+            "advert advent advent"
+            "footer footer footer";
+            
+        }
+        .container2{
+            font-size: 20px;
+            min-height: 400px;
+            width:100%;
+            background: lightgray;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+            grid-template-rows: repeat(3, minmax(90px, 1fr));
+            grid-column-gap: 20px;
+            grid-row-gap: 10px;
+            grid-gap: 10px 20px;
+
+            grid-template-areas: 
+            "header header header"
+            "advert advent advent"
+            "footer footer footer";
+
+          
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="d1">1</div>
+        <div class="d2">2</div>
+        <div class="d3">3</div>
+        <div class="d4">4</div>
+        <div class="d5">5</div>       
+    </div>
+    <div class="container2">
+        <div class="d1">1</div>
+        <div class="d2">2</div>
+        <div class="d3">3</div>
+        <div class="d4">4</div>
+        <div class="d5">5</div>
+    </div>
+    <div id="box-container">
+        <div id="box-1"></div>
+        <div id="box-2"></div>
+        <div id="box-3"></div>
+        <div id="box-4"></div>
+        <div id="box-5"></div>
+        <div id="box-6"></div>
+    </div>
+     <!--Add columns with grid=template-columns-->
+        <!--Add columns with grid=template-rows-->
+        <!--Use CSS grid units to change the size of columns and rows-->
+        <!--Create a column gap Using grid-column-grap-->
+        <!--Create a row gap using grid-row-gap-->
+        <!--Add gaps faster with grid-gap-->
+        <!--use grid-column to control spacing-->
+        <!--Use Grid-row to control spacing-->
+        <!--Align an Item Horizontally using justify-self-->
+        <!--Align an Item Vertically using justify-self -->
+        <!--Align all Items Horizantally using justify-items-->
+        <!--Align all Items Vertically using align-items-->
+        <!--Divide the grid Into an Area Template grid-template-area -->
+        <!--place Items in Grid Areas Using grid-area property-->
+        <!--Use grid-area: 1/1/2/4; without creating an Areas template -->
+        <!--Reduce repitition using the repeat-function-->
+        <!--Limit item size using the minmax function -->
+        <!--Create flexible Layouts using auto-fill-->
+        <!--Create Flexible Layouts using auto-fit-->
+        <!--Use media queries to create resposive layouts-->
+        <!--Create Grids within Grids-->
+        <!--Use display: flex to position two boxes-->
+        <!--Add flex superpowers to the tweet embed-->
+        <!--Use the flex-direction Property to make a row-->
+        <!--Apply the flex-direction Property to create roxs in the tweet Embed-->
+        <!--Use the flex-direction Property to make a column-->
+        <!--Apply the flex direction Property to create a column in the tweet embed-->
+        <!--Align Elements Using the justify-content Property justify-content=center-->
+        <!--Align elements using the align-items property-->
+        <!--Use the flex-wrap Property to wrap a Row or Column-->
+        <!--Use the flex-shrink Property to Shrink Items only if the flex container is too small-->
+        <!--Use the flex-grow Property to expand Items -->
+        <!--Use the flex-basis Property to set the Initial Size of an Item-->
+        <!--Use the flex Shorthand property-->
+        <!--Use the order property to rearrange items-->
+        <!--Use the align-self property-->
+</body>
+</html>

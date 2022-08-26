@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>Apple</li>
+        <li>Mango</li>
+        <li>Melon</li>
+    </ul>
+    <script>
+        let ul = document.getElementsByTagName("ul");
+        ul = ul[0]
+        let lis = document.getElementsByTagName("li");
+        lis = lis[1]
+        let addList = document.createElement("li")
+        addList.appendChild(document.createTextNode("Oranges"))
+        // oposite of appemdChild
+        function addToBeginning(parent, toInsert){
+            const firstChild = parent.firstChild;
+            parent.insertBefore(toInsert, firstChild)
+        }
+        addToBeginning(ul, addList)
+    </script>
+</body>
+</html>

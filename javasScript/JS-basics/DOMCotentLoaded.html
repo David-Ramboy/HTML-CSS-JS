@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="img" src="housedesign.jpg">
+    <script>
+        function ready(){
+            alert("DOM is ready");
+            // image is not yet loaded, unless was cached, so the size is 0x0;
+            alert(`image size: ${img.offsetWidth}x${img.offsetHeight}`);
+        }
+        document.addEventListener("DOMContentLoaded", ready);
+    </script>
+</body>
+
+</html>

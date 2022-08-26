@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            max-width: 100%;
+            height: 300px;
+        }
+    </style>
+    <script>
+        function changeText(element){
+            document.getElementById("changetext").innerHTML=element.alt;
+        }
+    </script>
+</head>
+<body>
+    <h1 id="changetext"></h1>
+    <div>
+        <img src="black-parade.jpg" alt="black-parade" onmouseover="changeText(this)" onmouseleave="document.getElementById('changetext').innerHTML = 'put you mouse and hover';">
+        <img src="greenday.jpg" alt="greenday" onmouseover="changeText(this)" onmouseleave="document.getElementById('changetext').innerHTML = 'put you mouse and hover';">
+        <img src="intheend.jpg" alt="intheend" onmouseover="changeText(this)" onmouseleave="document.getElementById('changetext').innerHTML = 'put you mouse and hover';">
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var weight = 10;
+        var name = "teoder";
+        
+        function dogBark(weight, name){
+            var doog;
+            if(weight > 49){
+                doog = "WOOF WOOF";
+                return doog;
+            }
+            else{    
+                doog ="woof woof";
+                return doog;
+            }
+           
+        }
+        
+        var printOut = dogBark(weight, name);
+        console.log("the doog is " + printOut);
+    </script>
+</body>
+</html>

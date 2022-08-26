@@ -1,0 +1,91 @@
+*, ::before, ::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+h1, h2{
+    line-height: 1.1;
+}
+.hero{
+    padding: 200px 0;
+    margin: 0;
+    align-items: center;
+    background-color: #F3EED9;
+    min-height: 660px;
+    display: flex;
+    align-items:center ;
+}
+.an-cont-small{
+    
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+.an-cont-big{
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    color: #824936;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    text-align: initial;
+    justify-content: space-between;
+}
+.container{
+    border: 2px solid orange;
+    text-align: center;
+    /* width: min(1120px,60%); */
+    width:60%;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.first-section{
+    padding: 100px 0;
+    color: #222C2A;
+}
+.second-section{
+    padding: 100px 0;
+    background-color: #222C2A;
+    color: #F3EED9;
+}
+.third-section{
+    padding: 100px 0;
+    background-color: #824936;
+    color: #F3EED9;
+}
+
+.second-section-primary, .third-section-secondary{
+    text-align: initial;
+}
+
+.col{
+    width: 45%;
+    font-family: 'Roboto', sans-serif;
+        font-size: clamp(1rem, 1vw, 1.25rem);
+
+}
+.margin-here{
+    margin-bottom: 2rem;
+    font-size: clamp(2rem, 10vw, 2.1rem);
+    
+    font-family: 'Playfair Display', serif;
+}
+.brown{
+    color: #824936;
+}
+@media (max-width:600px){
+    .row{
+        display: block;
+    }
+    .col{
+        width: 100%;
+    }
+    .col + .col{
+        margin-top: 1em;
+    }
+    .an-cont-big{
+        font-size: 1.7rem;
+    }
+}

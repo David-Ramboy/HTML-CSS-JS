@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous Function</title>
+</head>
+<body>
+    <script>
+        window.onload = function () {
+            var button = document.getElementById("bake");
+            button.onclick = function () {
+            console.log("Time to bake the cookies.");
+            cookies.bake(2500);
+        };
+        };
+        
+        var  cookies = {
+            instructions:"Preheat oven to 350...",
+            bake: function(time){
+                console.log("Baking the cookies");
+                setTimeout(done, time);
+            }
+        };
+
+
+
+
+
+        function done(){
+            alert("Cookies are ready, take them out to cool.");
+            console.log("Cooling the cookies. ");
+            // var cool = function(){
+            //     alert("Cookies are cool, time to eat!");
+            // };
+            setTimeout(function(){
+                alert("Cookies are cool, time to eat!");
+            }, 1000);
+        }
+
+    </script>
+    <button id="bake">Bake</button>
+</body>
+</html>

@@ -1,0 +1,17 @@
+.img--movie{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+}
+.container{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: auto;
+}
+.movie-list{
+    flex-wrap: wrap;
+    display: flex;
+    border: 1px solid black;
+}

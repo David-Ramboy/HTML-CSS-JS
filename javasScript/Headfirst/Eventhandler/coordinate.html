@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            margin-top: 40px;
+            display: inline;
+            font-size: 100px;
+            margin-left: 400px;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        window.onload = init;
+        
+        function init(){
+            var getEx = document.getElementsByTagName("p");
+            getEx[0].onmousemove =  coordinates;
+        }
+        function coordinates(eventObj){
+        var map =document.getElementById("coord");
+        var y = eventObj.clientY;
+        var x = eventObj.clientX;
+        map.innerHTML = "Map coordinates " + x + "," + y;
+        }
+
+    </script>
+</head>
+<body>
+    <p>x</p>
+    <p id="coord"> show coordinates</p>
+</body>
+</html>

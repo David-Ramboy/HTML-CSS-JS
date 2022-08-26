@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // let pEl2 = document.createElement("p"),
+        //     pText2 = document.createTextNode("Learn more about the DOM. "),
+        //     aText = document.createTextNode("Read More.."),
+        //     aEl = document.createElement("a");
+
+        //     aEl.setAttribute("href", "#link" )
+        //     aEl.appendChild( aText );
+
+        //     pEl2.appendChild( pText2 );
+        //     pEl2.appendChild( aEl )
+        //     console.log(pEl2);
+            
+        //     let body = document.getElementsByTagName("body")
+
+        //     body[0].append(pEl2)
+
+        //     console.log(body[0])
+
+
+        // const pText = document.createTextNode("Lorem")
+        // const pEl = document.createElement("p");
+
+        // pEl.appendChild( pText )
+
+        // console.log(pEl.childNodes.length)
+        // console.log(pEl.childNodes[0].nodeValue)
+        // console.log(pEl.outerHTML)
+
+        var divEL = document.createElement("div"),
+            docFang = document.createDocumentFragment(),
+            p1Text = document.createTextNode("Lorem"),
+            p1El = document.createElement("p"),
+            p2Text = document.createTextNode("Ipsum"),
+            p2El = document.createElement("p"),
+            p3Text = document.createTextNode("Maximus"),
+            p3El = document.createElement("p")
+    
+        p1El.appendChild( p1Text );
+        p2El.appendChild( p2Text );
+        p3El.appendChild( p3Text );
+
+        docFang.appendChild( p1El );
+        docFang.appendChild( p2El );
+        docFang.appendChild( p3El );
+
+        divEL.appendChild(docFang);
+
+        console.log(divEL)  
+    </script>
+</body>
+</html>

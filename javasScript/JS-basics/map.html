@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input class="p" type="text" value="1">
+    <input class="p" type="text" value="1">
+    <input class="p" type="text" value="1">
+    <input class="p" type="text" value="1">
+    
+    <script>
+        // const arr = [11,,3,4,5,6]
+        // let test = arr.map(function(element, index){ return element})
+        // console.log(test)
+        // console.log(arr)
+
+        // let arr2 = [11,2,3,4,5,6,7,10]
+        // let num = []
+        // arr2.forEach((element,index) => { console.log(index) })
+        // console.log(arr2)
+        // console.table(num)
+
+        let parag = document.querySelectorAll('.p')
+        let values = Array.prototype.map.call(parag, value => value)
+        console.log(values)
+    </script>
+</body>
+</html>

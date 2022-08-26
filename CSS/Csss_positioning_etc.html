@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css possitioning</title>
+    <style>
+      
+        .parent{
+            background-color: sandybrown;
+            padding-bottom: 1000px;
+        }
+        
+        .child-one{
+           
+            background-color: seagreen;
+            
+        }
+        .child-two{
+            background-color: slateblue;
+           
+        }
+        .child-three{
+            background-color: springgreen;
+            position: fixedp;
+            top: 0;
+        }
+     
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        Parent
+        <div class="container">
+            <div class="child-one ">One</div>
+            <div class="child-two">Two</div>
+            <div class="child-three">Three</div>
+            <!--HTML elements are positioned static by default, elements are not affected by the top, bottom, left, and right properties.-->
+            <!--Position relative is positioned to is normal position, setting up the top, right, bottom, and left properties of a relatively positioned can be adjusted .-->
+            <!--Position absolute are most used in top, right, bottom and left -->
+            <!--Position relative and position absolute is connect each other to fit and not to overflow in other html file-->
+            <!--position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed it move a long with page scrolling)-->
+            <!--Position fixed staying same place when you scroll-->
+            <!--Position sticky is combination of fixed position and relative position-->
+        </div>
+    </div>
+</body>
+</html>

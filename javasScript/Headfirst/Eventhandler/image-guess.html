@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Guess</title>
+    <style>
+        body{
+            margin:20px;
+        }
+        img{
+            max-width: 400px;
+            display:block;
+            margin: 0 auto;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        window.onload = init;
+      function init(){
+        var image = document.getElementById("zero");
+        image.onclick = showAnswer;
+        var link = document.getElementById("link");
+        link.onclick = showAnswer;
+        // link.href = "http://www.youtube.com"
+
+      }
+      function showAnswer(){
+        var image = document.getElementById("zero");
+        image.src = "cat-unblurred.jpg"
+        // image.setAttribute("src", "cat-unblurred.jpg");
+        var link = document.getElementById("link");
+        link.href = "http://www.youtube.com"
+        link.innerHTML = "youtube"
+      }
+      
+    </script>
+</head>
+<body>
+    <a id="link" href="http://www.google.com">google</a>
+    <img id="zero"  src="cat-blurred.jpg">
+</body>
+</html>

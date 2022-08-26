@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro to canvas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="../../Fblike.jpg" style="width:120px;" id="like" alt="">
+    <canvas id="canvas1"></canvas>
+    <script src="index.js"></script>
+    <script>
+        let canvas = document.getElementById('canvas1')
+        let ctx = canvas.getContext('2d');
+    // to create box filled red
+        // ctx.fillStyle = '#FF0000'
+        // ctx.fillRect(0,0,150, 60)
+    // to create line accross the box
+        // ctx.moveTo(0,0)
+        // ctx.lineTo(800,400)
+        // ctx.stroke()
+    // Create a circle  
+        // ctx.beginPath();
+        // ctx.arc(95,60,50,0,2 * Math.PI);
+        // ctx.stroke();
+    // Create gradient
+        // let grd = ctx.createLinearGradient(0,0,200,0);
+        // grd.addColorStop(0, 'red');
+        // grd.addColorStop(1, 'white');
+    // FIll with gradient
+        // ctx.fillStyle = grd;
+        // ctx.fillRect(10,10,150,80)
+    // createRadialGradient();
+        // let grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+        // grd.addColorStop(0, 'red');
+        // grd.addColorStop(1, 'white');
+        // ctx.fillStyle = grd;
+        // ctx.fillRect(10,10,150,80)
+    // Using fillText()
+        // ctx.font = "30px Arial"
+        // ctx.fillText("Hello World", 10, 50);
+    //Using strokeText()
+        // ctx.font = '30px Arial'
+        // ctx.strokeText('Hello World', 10, 50)
+    //Add color
+        // ctx.font = '30px Comic Sans MS';
+        // ctx.fillStyle = 'red';
+        // ctx.textAlign = 'center';
+        // ctx.fillText('Hello World', canvas.width/2, canvas.height/2)
+    //Canvas Images
+        window.onload = function(){
+            let canvas = document.getElementById('canvas1')
+            let ctx = canvas.getContext('2d');
+            let like = document.getElementById('like')
+            //ctx.drawImage(img, sx, sy, sWidth, sHeight, x, y, width, height);
+
+            ctx.drawImage(like, 50,50, 100,100)
+        }
+    </script>
+</body>
+</html>

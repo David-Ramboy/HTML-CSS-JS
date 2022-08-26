@@ -1,0 +1,15 @@
+justify is one available value for the text align property. it allows the formatting of text in a style often found in newspaper design.
+text-align
+-left		-start		-<string>
+-right		-end	-start<string>
+-center		-start end   -<string> end
+-justify	-match-parent -inherent
+direction:ltr;
+text-align:start;/*right*/
+-----------------------------
+direction:rtl;
+text-align:start;/*right*/
+-----------------------------
+text-align:start".";
+-----------------------------
+https://www.youtube.com/watch?v=qYtXNF2zRpk

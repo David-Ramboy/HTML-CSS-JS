@@ -1,0 +1,58 @@
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+html{
+    box-sizing: border-box;
+
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    padding: 100px 0;
+   
+}
+.inner-container{
+   
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.content{
+
+    width: 60%;
+}
+.cont-1{
+    background-color: lightblue;
+
+}
+.cont-3{
+    background-color: teal;
+}
+.row{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+}
+.col{
+    width: 100%;
+   text-align: center;
+    
+}
+
+.col + .col{
+    margin-left:100px;
+}
+.cont-3 > .row > .col > h1, p{
+    margin: 0;
+    padding: 0;
+}
+.three-cols{
+    padding: 3em    2 0;
+}
+.three-cols h1{
+    color: palevioletred;
+}
+

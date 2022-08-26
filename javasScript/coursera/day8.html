@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label>name:  <input type="text" id="name" name="name" placeholder="name"></label><br>
+        <label>email: <input type="email" id="email" name="email"></label><br>
+        <label>Birth: <input type="date" id="birth" name="birth"> </label><br>
+        <input type="submit" value="click here"><br> <br>
+        
+    </form>
+    <form>
+        zip-code with pattern:
+        <input type="text" name="zip-code" pattern="[0-9]{5}" required><br>
+        zip-code with numbers:
+        <input type="number" name="zip-code-2" min="0000" max="9999" required>
+        <input type="submit" value="click here"><br> <br>
+    </form>
+</body>
+</html>

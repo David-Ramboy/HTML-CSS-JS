@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="addnew()">add Number</button>
+    <div id="id-1"></div>
+    <button onclick="compute()">compute</button>
+    <div id="id-2"></div>
+    
+    
+    <script>
+        // // --------if statement --------
+        // var name = prompt("What is your name?")
+        // if(name.length != 0){
+        //     document.write("hello " + name)
+        // }
+        // else
+        //     document.write("feeling shy??")   
+        // if statement and for loop
+        var numbers =[2, 5, , , 9, , 4];
+
+        
+        var sum = 0;
+        var count = 0
+        function addnew(){
+        var addNum= prompt("Add a new number? ");
+        numbers[numbers.length] = addNum;
+        document.getElementById('id-1').innerHTML=numbers;
+
+        }   
+
+        function compute(){
+        if(numbers.length > 0){
+            for (i=0;i<numbers.length;i++){
+                if(numbers[i] != undefined){
+                sum += numbers[i];
+                count = count + 1;
+                }
+            }
+            document.getElementById('id-2').innerHTML = sum/count;
+        }
+        // else statement
+        else 
+            document.getElementById('id-2').innerHTML = "empty array";
+         }
+    </script>
+</body>
+</html>

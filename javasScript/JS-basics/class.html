@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // class User{
+        //     constructor(email, name){
+        //         this.email = email;
+        //         this.name = name;
+        //     }
+        //     login(){
+        //         console.log(this.email, 'just logged in');
+        //     }
+        //     logout(){
+        //         console.log(this.email, 'logged out')
+        //     }
+        // }
+
+        // var userOne = new User('david@gmail.com','david');
+        // console.log(userOne);
+
+        // userOne.login();
+        // userOne.logout();
+
+        // -------------------------------------------method chaining
+
+        // class User{
+
+        //     constructor(email, name){
+        //         this.email = email;
+        //         this.name = name;
+        //         this.score = 0;
+        //     }
+        //     login(){
+        //         console.log(this.email, 'just logged in');
+        //         return this;
+            
+        //     }
+        //     logout(){
+        //         console.log(this.email, 'logged out')
+        //         return this;
+            
+        //     }
+        //     updateScore(){
+        //         this.score++;
+        //         console.log(this.email, 'score is now', this.score);
+        //         return this;
+        //     }
+        // }
+
+        // var userOne = new User('david@gmail.com','david');
+
+        // userOne.login().updateScore().updateScore().logout();
+
+        // ------------------------------ class inheritance------------
+
+            // class User{
+
+            //     constructor(email, name){
+            //         this.email = email;
+            //         this.name = name;
+            //         this.score = 0;
+            //     }
+            //     login(){
+            //         console.log(this.email, 'just logged in');
+            //         return this;
+
+            //     }
+            //     logout(){
+            //         console.log(this.email, 'logged out')
+            //         return this;
+
+            //     }
+            //     updateScore(){
+            //         this.score++;
+            //         console.log(this.email, 'score is now', this.score);
+            //         return this;
+            //     }
+            // }
+                //Prototype
+            // class Admin extends User{
+            //     userDelete(user){
+            //         users = users.filter(u => {
+            //             return u.email != user.email
+            //         })
+            //     }
+            // }
+
+            // var userOne = new User('david@gmail.com','david');
+            // var userTwo = new User('bryan@gmail.com', "bryan")
+
+            // var admin = new Admin('admin@gmail.com', "ramboy");
+
+            // var users = [userOne, userTwo];
+            // console.log(userOne)
+            // admin.login();
+            // admin.userDelete(userOne);
+            // console.log(users);
+        
+        // function User(email, name){
+        //     this.email = email;
+        //     this.name = name;
+        //     this.online = false;
+        // }
+
+        // User.prototype.login = function(){
+        //     this.online = true;
+        //     console.log(this.email, 'has logged in');
+        // }
+        
+        // User.prototype.logout = function(){
+        //     this.online = false;
+        //     console.log(this.email, 'has logged out');
+        // }
+
+        // function Admin(...args){
+        //     User.apply(this,args);
+        //     this.role = 'super admin'
+        // }
+
+        // Admin.prototype = Object.create(User.prototype);
+        // // Admin.prototype = new User();
+        // Admin.prototype.deleteUsers = function(u){
+        //     console.log(u)
+        //     console.log(u.email)
+        //     users = users.filter(function(user){
+        //         // console.log(users)
+        //         // console.log(user.email)
+        //         return user.email != u.email;
+        //     })                
+        // }
+        // let userOne = new User('userOne@gmail.com', 'UserOne')
+        // let admin = new Admin("admin@gmail.com", "admin")
+
+        // let users = [userOne, admin];
+        // // userOne.login()
+        // // console.log(userOne.online);
+        
+
+        // // admin.login()
+        // // console.log(admin.role);
+
+        // // console.log(admin)
+        // // console.log(userOne)
+        
+        // admin.deleteUsers(userOne)
+        // console.log(users)
+
+        //============================================================
+        //   class User{
+
+        //     constructor(email, name){
+        //         this.email = email;
+        //         this.name = name;
+        //         this.score = 0;
+        //     }
+        //     static login(){
+        //         console.log(this.email, 'just logged in');
+        //         return this;
+            
+        //     }
+        //     static logout(){
+        //         console.log(this.email, 'logged out')
+        //         return this;
+            
+        //     }
+        //     static updateScore(){
+        //         this.score++;
+        //         console.log(this.email, 'score is now', this.score);
+        //         return this;
+        //     }
+        // }
+
+        // let userOne = new User("userOne@gmail.com", 'userOne')
+        // console.log(User.login())
+
+        class Facebook{
+            constructor(username,password){
+                this.username = username
+                this.password = password
+            }
+            home(message){
+                console.log("Welcome" + this.username + this.password + message)
+            }
+
+            // the get represent a property but a method at the same time or we say like a callback when invoked
+            get ChangeName(){
+                return this.username + "Has been logged in"
+            }
+            // the setter is to change the existing property in the class object to new setter values
+            set ChangeName(change){
+                this.username = change.name
+                this.password = change.password
+            }
+        }
+
+        const david = new Facebook("davidbryan", "123")
+        david.home("Nice to meet you")
+        console.log(david)
+
+        david.ChangeName = {name:"Ramboy",password:1314}
+        console.log(david)
+        
+        let expr = "name";
+        let obj = {
+            get [expr](){
+                return 'sachi';
+            }
+        }
+        console.log(obj.name)
+
+    </script>
+</body>
+</html>

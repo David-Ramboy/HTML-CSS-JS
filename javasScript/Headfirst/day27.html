@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function makeCount(){
+        //     var count = 0;
+            
+        //     function counter(){
+        //         count = count + 1;
+        //         return count;
+        //     }
+        //     return counter; // was evaluated by the local var
+        //     // return counter; not evaluted it only reference
+
+        // }
+        // var test = makeCount();
+        // console.log(test())
+        // console.log(test())
+        // console.log(test())
+        
+        // make a password
+        // function makePassword(password){
+        //     return function(passwordGuess){
+        //         return(passwordGuess === password);
+        //     }
+        // }
+        // var passwordGuess = makePassword("david")
+        // console.log("Guessing 'nope': " + passwordGuess("nope"))
+        // console.log("Guessing 'david': " + passwordGuess("david"))
+        
+        // // 
+        // function multN(n){
+        //     return function(y){
+        //         return y * n;
+        //     };
+        // }
+        // var multiS = multN(5);
+        // var test = multiS(10);
+
+        // console.log(test);
+
+        // function makeCount(){
+        //     var count = 0
+        //     return function(){
+        //         var counter = {
+        //             countM:function(){
+        //                 count =  count + 1;
+        //                 return count;
+        //             }
+        //         }
+        //         return counter.countM()
+        //     }
+        // }
+        
+        // var test = makeCount();
+        
+        // console.log(test())
+        // console.log(test())
+        // console.log(test())
+
+        // function makeCounter(){
+        //     var count =0;
+        //     return{
+        //         increment: function(){
+        //             count++;
+        //             return count;
+        //         }
+        //     };
+        // }
+        // var counter = makeCounter();
+        // console.log(counter.increment())
+        // console.log(counter.increment())
+        // console.log(counter.increment())
+
+        
+        // function makerTimer(doneMessage, n){
+        //     setTimeout(handler, n)
+        // }
+        // function(){
+        //     alert(doneMessage);
+        // }
+        // makerTimer("Coookies are done!", 2000);
+        
+        // function makerTimer(doneMessage, n){
+        //     setTimeout(function(){
+        //         alert(doneMessage)
+        //     }, n)
+        // };
+        // makerTimer("COokies are made!", 2000)
+
+
+        // window.onload = init;
+        // var cookies = {
+        //     instructions: "Preheat oven to 350...",
+        //     bake: function(time) {
+        //     console.log("Baking the cookies.");
+        //     setTimeout(done, time);
+        //     }
+        // };
+
+        // function init() {
+        //     var button = document.getElementById("bake");
+        //     button.onclick = handleButton;
+        // }
+
+        // function handleButton() {
+        //     console.log("Time to bake the cookies.");
+        //     cookies.bake(2500);
+        // }
+
+        // function done() {
+        //     alert("Cookies are ready, take them out to cool.");
+        //     console.log("Cooling the cookies.");
+        
+        //     var cool = function() {
+        //         alert("Cookies are cool, time to eat!");
+        //     };
+        
+        //     setTimeout(cool, 1000);
+        // }
+        
+        function makerTimer(doneMessage, n){
+            doneMessage = "whoe"
+
+            doneMessage = "Ouch"
+            setTimeout(function(){
+                alert(doneMessage)
+            }, n)
+        };
+        makerTimer("COokies are made!", 2000)
+
+    </script>
+</body>
+</html>

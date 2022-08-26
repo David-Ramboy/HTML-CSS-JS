@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // // indexOf
+        // var log = console.log
+        // var phrase = "the cat in the hat"
+        // var index = phrase.indexOf("cat")
+        // log("There is a cat sitting at index " + index);
+        
+        // var log = console.log
+        // var phrase = "the cat in the hat"
+        // var index = phrase.indexOf(" ", 11)  // 5 is the starting point of the search
+        // log("There is a the sitting a index " + index);
+
+        // var log = console.log
+        // var phrase = "the cat in the hat"
+        // var index = phrase.indexOf("dog")     // the dog cant be found so return -1
+        // log("There is a cat sitting at index " + index);
+        // //substring
+        // var data = "name|phone|address"
+        // var  val = data.substring(0, 4);  // starting to between last(not including the second search but in betwween)
+        // log(val);
+        // val = data.substring(5);
+        // log(val)
+
+        // var data = "name|phone|address";
+        // var vals = data.split("|");
+        // log("Split array is ", vals);
+
+        // var text = "David"
+        // var text2 = "Bryan"
+        // var text3 = "Ramboy"
+        // var value = text.concat(text2, text3);
+        // log(value)        
+        // var inp = "1111";
+        // if(inp = 1111){
+        //     console.log("false")
+        // }else{
+        //     console.log("true")
+        // }
+        // for(i = 0; i < inp.length; i++){
+        //     if(inp[i] == Number){
+        //         console.log("yes it is a number")
+               
+        //     }else{
+        //        console.log("not a number")
+        //     }
+        // }
+        // var phoneNum = "123-4567"
+        // function acceptNum(num){
+        //     if(num.length !== 8){
+        //         return false
+        //     }
+        //     for(i = 0; i < num.length; i++){
+        //         if(i === 3){
+        //             if(num[i] !== "-"){
+        //                 return false;
+        //             }
+        //         }else if (isNaN(num.charAt(i))){
+        //             return false;
+        //         }
+        //     }
+        //     return true;
+        // }
+        
+        // var test = acceptNum(phoneNum);
+        // console.log(test)
+        var phoneNum = "12314567"
+        function acceptNum(num){
+            if(num.length !== 8){
+            console.log("this has been executed")
+
+                return false
+            }
+            var second = phoneNum.substring(0, 3);
+            var third = phoneNum.substring(4);
+            if(phoneNum.charAt(3) !== "-"||isNaN(second)|| isNaN(third)){
+                console.log("this has been executed2")
+
+
+                return false;
+            }
+            console.log("all are not executed")
+        return true;
+
+            
+        }
+        
+        var test = acceptNum(phoneNum);
+        console.log(test)
+
+        // var phoneNumber = "123-4567"
+
+        // function validate(phoneNumber) {
+        //     if (phoneNumber.length !== 8) {
+        //     return false;
+        //     }
+        //     for (var i = 0; i < phoneNumber.length; i++) {
+        //     if (i === 3) {
+        //     if (phoneNumber.charAt(i) !== '-') {
+        //     return false;
+        //     }
+        //     } else if (isNaN(phoneNumber.charAt(i))) {
+        //     return false;
+        //     }
+        //     }
+        //     return true;
+        //     }
+        //    var val =  validate(phoneNum);
+        //     console.log(val)
+    </script>
+</body>
+</html>

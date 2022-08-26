@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var secret = "007";
+        
+        // function getSecret(){
+        //     var secret ="008";
+        //     function getValue(){
+        //         return secret;
+        //     }
+        //     return getValue(); // when you see a parenthesis in returnin a function means it evaluated and when you call a function you dont need to put a parenthesis;
+        // }
+
+        // var getValueFun = getSecret();
+        // console.log(getValueFun)
+
+        // var secret = "007";
+        
+        // var  getSecret = function(){
+        //     var secret ="008";
+
+        //     function getValue(){
+        //         return secret; // seee this same at the top of the function it return an inner function and it not was invorking/evaluated it means when we call it to the outside it must with parenthesis to see the funtion evaluated 
+        //     }
+
+        //     return getValue;
+        // }
+        
+        // var getValueFun = getSecret();
+        // console.log(getValueFun())
+
+        // var justAvar = "Oh, don't you worry about it, I'm GLOBAL";
+        
+        // function whatAreYou(){
+        //     var justAvar ="hey"
+        //     function inner(){
+        //         return justAvar;
+        //     }
+        //     return inner;
+        
+        // }
+        // var test = whatAreYou();
+        // console.log(test)
+
+
+        function showLastName(){
+            const lastName = "Sofela";
+            function lastNameInn(){
+                function last2(){
+                    
+                    return lastName + i;
+                    function last3(){
+                        var i = "tick"
+                    }
+                    
+                }
+                return last2();
+            }
+            return lastNameInn();
+        }
+
+        function displayFullName(){
+            const fullname = "Oluwatobi" + showLastName();
+            return fullname;
+        }
+
+        console.log(displayFullName())
+    </script>
+</body>
+</html>

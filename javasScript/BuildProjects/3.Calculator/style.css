@@ -1,0 +1,67 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #00AAFF, #00FF6C);
+
+}
+.container{
+    padding-top: 10px;
+    padding-left: 10px;
+    border: 1px solid black;
+    height: 200px;
+    width: 200px;
+    background: gainsboro;
+}
+.buttons{
+    margin-top: 20px;   
+
+}
+.buttons,.buttons2{
+    height: auto;
+    display: grid;
+    width: inherit;
+    grid-template-columns: repeat(3, 56px);
+}
+.number{
+    text-align: center;
+    border: 1px solid black;
+    height: 20px;
+}
+.operators, .equal, .clear, .delete{
+    text-align: center;
+    border: 1px solid black;
+    height: 20px;
+}
+.number:hover, .operators:hover, .equal:hover, .clear:hover, .delete:hover{
+    background-color: aliceblue;
+}
+.hide{
+    display: none;
+}
+.output{
+    margin: 0;
+    padding: 0;
+    border: 1px black solid;
+    background: black;
+    width: 175px;
+    text-align: end;
+    height: 20px;
+    color: white;
+    margin-bottom: -5px;
+    word-wrap: break-word;
+    word-break: break-all;
+    
+}
+.previousValue{
+    margin: 0;
+    margin-bottom: 1px;
+    padding: 0;
+    border: 1px black solid;
+    background: black;
+    width: 175px;
+    text-align: end;
+    height: 20px;
+    color: white;
+}

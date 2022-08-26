@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn" onclick="func()">click</button>
+    <script>
+        let count = 0
+
+        function func(){
+            let date = new Date().getTime();
+            let num = Math.random(date);
+            
+            count++
+            return count;
+        }
+        console.log(func())
+        console.log(func())
+        console.log(func())
+
+    </script>
+</body>
+</html> 

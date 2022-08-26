@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carWithDrive</title>
+</head>
+<body>
+    <script>
+        // ==============================
+        // var fiat = {
+        //     make: "Fiat",
+        //     model: "500",
+        //     year: 1957,
+        //     color: "Medium blue",
+        //     passenger: 2,
+        //     convertible: false,
+        //     mileage: 88000,
+        //     drive: function() {         //==== this term called "method" not a function
+        //             alert("Woof Woof");
+        //         }
+        // };
+        // fiat.drive();
+
+        //=================================
+
+        // var fiat = { 
+        //     make: "Fiat",
+        //     model: "500",
+        //     year: 1957, 
+        //     color: "Medium Blue",
+        //     passengers: 2,
+        //     convertible: false,
+        //     mileage: 88000,
+        //     started: false, 
+        //     start: function(){             // This is where we pointing the properties in the object
+        //         this.started = true;
+        //     },
+        //     stop: function(){
+        //         this.started = false;
+        //     },
+        //     drive: function(){
+        //         if(this.started){
+        //             alert("Zoom Zoom");
+        //         }else{
+        //             alert("You need to start the engine first.")
+        //         }
+        //     }
+        
+        // }
+        // fiat.drive();
+        // fiat.start();
+        // fiat.drive();
+        // fiat.stop();
+        // =========================
+        // var song = {
+        //     name: "Walk This Way",
+        //     artist: "Run-D.M.C.",
+        //     minutes: 4,
+        //     seconds: 3,
+        //     genre: "80s",
+        //     playing: false,
+        //     play: function() {
+        //         if(!this.playing){ ///// ============= if you use only if and the condition is false use not "!"
+        //             this.playing = true;
+        //             console.log("Playing " + this.name + " by " + this.artist);
+        //         } 
+        //     },
+        //     pause: function() {
+        //        if (this.playing) {
+        //             this.playing = false;
+        //         }
+        //     }
+        // };
+
+        // song.play();
+        // song.pause();
+        // =======================
+        var eightBall = {
+            index: 0,
+            advice: ["yes", "no", "maybe", "not a chance"],
+            shake: function(){
+                this.index = this.index + 1;
+                if (this.index >= this.advice.length){
+                    this.index = 0;
+
+                }
+            },
+            look: function(){
+                return this.advice[this.index];
+            }
+        };
+        eightBall.shake();
+        console.log(eightBall.look());
+        //====================================
+        //   //     }
+        //   var taxi = {
+        //     make:"Webville Motors",
+        //     model:"taxi",
+        //     year:1955,
+        //     color:"yellow",
+        //     passengers:4,
+        //     convertible:false,
+        //     mileage:281341,
+        //     started: false,
+        //     start: function() {
+        //         this.started = true;
+        //     },
+        //     stop: function() {
+        //         this.started = false;
+        //     },
+        //     drive: function() {
+        //         if (this.started) {
+        //             alert(this.make + " " + this.model + " goes zoom zoom!");
+        //         } else {
+        //         alert("You need to start the engine first.");
+        //         }
+        //     }
+        // }
+        // var cardi = {
+        //     make:"GM",
+        //     model:"Cardillac",
+        //     year:1955,
+        //     color:"tan",
+        //     passengers:5,
+        //     convertible:false,
+        //     mileage:12892,
+        //     started: false,
+        //     start: function() {
+        //         this.started = true;
+        //     },
+        //     stop: function() {
+        //         this.started = false;
+        //     },
+        //     drive: function() {
+        //         if (this.started) {
+        //             alert(this.make + " " + this.model + " goes zoom zoom!");
+        //         } else {
+        //         alert("You need to start the engine first.");
+        //         }
+        //     }
+        // }
+        // var chevy = { 
+        //     make: "Chevy",
+        //     model: "Bel Air",
+        //     year: 1957, 
+        //     color: "red",
+        //     passengers: 2,
+        //     convertible: false,
+        //     mileage: 1021,
+        //     started: false,
+        //     start: function(){
+        //         this.started = true;
+        //     },
+        //     stop: function(){
+        //         this.started = false;
+        //     },
+        //     drive: function(){
+        //         if(this.started){
+        //             alert(this.make + " " + this.model + "goes zoom zoom!");
+        //         }else{
+        //             alert("You need to start the engine first.");
+        //         }
+        //     }
+        // };
+        // taxi.start();
+        // taxi.drive();
+        // taxi.stop();
+        // cardi.start();
+        // cardi.drive();
+        // cardi.stop();
+        // chevy.start();
+        // chevy.drive();
+        // chevy.stop();
+        
+
+
+    </script>
+</body>
+</html>

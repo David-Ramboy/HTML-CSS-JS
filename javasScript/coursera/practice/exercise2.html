@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            
+            margin: 0 auto;
+            width: 300px;
+            height: 400px;
+            background-color: aqua;
+            background-size: cover;
+            border: 1px solid black;
+        }
+        
+        .second-sec{
+            display: flex;
+            justify-content: space-around;
+            margin: 100px;
+        }
+        .item{
+            
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+        .item-1{
+            background-size: cover;
+        }
+        .item-2{
+            background-size: cover;
+        }
+        .item-3{
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <section class="first-sec">
+        <div  id="main">hover below</div>
+    </section>
+    <section class="second-sec">
+        <img class="item item-1" alt="black-parade" onmousemove="openThis(this)" onmouseover="undoThis()" src="black-parade.jpg">
+        <img class="item item-2" alt="greenday" onmousemove="openThis(this)" onmouseover="" src="greenday.jpg">
+        <img class="item item-3" alt="intheend" onmousemove="openThis(this)" onmouseover="" src="intheend.jpg">
+    </section>
+    <script>
+        function openThis(element){
+            document.getElementById('main').innerHTML=element.alt;
+            document.getElementById('main').style.backgroundImage="url(" + element.src +  ")";
+        }
+        function undoThis(){
+         var main= document.getElementById('main').innerHTML;
+         document.getElementById('main').innerHTML= main;
+        }
+    </script>
+</body>
+</html>

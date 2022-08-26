@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 1000vh;
+            
+        }
+   .head{
+        /**************************************************
+            background-color: cornflowerblue; -1st in last layer
+            background-image: url(archer-bob.jpg); - 0|1 instance
+            background-position: center center; - 0|1 instance
+                                    - bottom left right top
+                                    - horizontal vertical
+            background-size: cover; - 0|1 instance 
+                                    - immediately after position
+                                    - position / size
+                                    - cover | contain | auto
+            background-repeat: no-repeat; - 0|1 instance
+                                    - repeat-x repeat-y repeat
+            background-attachment: fixed;  - 0|1 instance
+                                    - local scroll
+            background-origin: border-box; - comes first
+                                    - padding-box content-box
+            background-clip: content-box;  - comes second
+            
+            - commas between layers
+            **************************************************/
+       color: azure;
+       min-height: 10em;
+       border-top: 10px dashed black;
+       border-bottom: 10px dashed black;
+       padding: 1rem;
+       background: aqua url(../Pictures/Teentitans.jpg) top left / contain no-repeat local border-box border-box; 
+    
+       
+    
+   }
+   header{
+    position: absolute;
+    position: fixed;
+    top: 100px;
+   }
+   header, h1{
+       text-shadow: 2px 2px 2px  black;
+   }
+        
+     
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+    <header class="head">
+        <h1>header</h1>
+    </header>
+    <body></body>
+    <footer></footer>
+    </div>
+    <!--https://youtu.be/zdubzXvqUyw-->
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Me</title>
+    <style>
+        button,div{
+            margin-left: 100px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+       // my own solution
+        // window.onload = function(){
+        //     var button = document.getElementById("clickme");
+        //     var count = 0
+        //     var countMe = document.getElementById("message");
+          
+        //     button.onclick = function(){
+        //         count = count + 4;
+        //         countMe.innerHTML = "you clicked " + count + " times";
+        //         return count;
+        //     }
+        //     };
+
+            // without closure
+        // var count = 0;
+
+        // window.onload = function(){
+        //     var button = document.getElementById("clickme");
+        //     button.onclick = handleClick;
+        // };
+        // function handleClick(){
+        //     var message ="You clicked me";
+        //     var div
+        // }
+        // with closure
+
+        window.onload = function(){
+            var count = 0;
+            var message = "You clicked me ";
+            var div = document.getElementById("message");
+            var button = document.getElementById("clickme");
+            button.onclick = function(){
+                count++;
+                div.innerHTML = message + count + " Times!";
+            };
+        };
+    </script>
+    <button id="clickme">Click me</button>
+    <div id="message"></div>
+</body>
+</html>

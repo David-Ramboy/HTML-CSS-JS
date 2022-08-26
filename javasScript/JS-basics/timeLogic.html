@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        align-items: center;
+
+    }
+</style>
+<body>
+
+    <p class="hours">0</p>:<p class="minutes">0</p><p class="ampm">AM</p>
+
+    <script>
+        // let hours = new Date().getHours()
+        // let minutes = new Date().getMinutes()
+        let hour = document.querySelector('.hours')
+        let minute = document.querySelector('.minutes')
+        let ampm = document.querySelector('.ampm')
+        let hourParm = 0;
+        let minuteParm = 0;
+        function hoursInt(num){
+            if(minuteParm === 99){
+                if(hourParm !== 24){
+                    num++                    
+                }else{
+                    num = 0
+                }
+            }
+            
+            
+        }
+
+
+        function minutesfunc(){
+            if(minuteParm !== 59){
+                minuteParm++
+            }else{
+                minuteParm = 0
+                if(hourParm !== 12 && ampm.textContent == 'AM'){
+                    hourParm++
+                }else{
+                    ampm.textContent = 'PM'
+                    hourParm = 1
+
+                    clearInterval(minutes)
+                }
+            }
+            hour.textContent = hourParm
+            minute.textContent = minuteParm
+        }
+
+        // let hours = setInterval(minutes, 1000)
+
+        let minutes = setInterval(minutesfunc, 10)
+       
+        let getAmPm = 'AM'
+        
+        let hourTwelve = new Date()
+
+        // let getTimeAm = `${hours}:${minutes} ${getAmPm}`
+
+        // let test = TimeCycle(hours,minutes,getAmPm)
+        
+    //     function TimeCycle(hours,minutes,getAmPm){
+    //         if(hours == 12 && minutes == 00){
+    //             if(getAmPm == 'AM'){
+    //                getAmPm = 'PM'
+    //             }else{
+    //                 getAmPm = 'AM'
+    //             }
+    //         }
+            
+    //     let getTimeAm = `${hours}:${minutes} ${getAmPm}`
+    //         console.log(getTimeAm)
+    // }      
+        // const now = new Date().toLocaleTimeString([],{
+        //     hour: '2-digit',
+        //     minute: '2-digit',
+        //     hour12: true
+        // })
+    </script>
+</body>
+</html>

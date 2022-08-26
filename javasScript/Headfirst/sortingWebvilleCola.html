@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Webville Cola</title>
+</head>
+<body>
+    <script>
+        var products =[{name: "Grapefruit", calories: 170, color: "red", sold: 8200},
+                    {name: "Orange", calories: 160, color: "orange", sold: 12101},
+                    {name: "Cola", calories: 210, color: "caramel", sold: 25412},
+                    {name: "Diet Cola", calories: 0, color: "caramel", sold: 43992},
+                    {name: "Lemon", calories: 200, color: "clear", sold: 14983},
+                    {name: "Raspberry", calories: 180, color: "pink", sold: 9427},
+                    {name: "Root Beer", calories: 200, color: "caramel", sold: 9909},
+                    {name: "Water", calories: 0, color: "clear", sold: 62123}
+                ];
+        function compareSold(colaA, colaB){
+            if(colaA.sold > colaB.sold){
+                return 1;
+            }else if(colaA.sold === colaB.sold){
+                return 0;
+            }else{
+                return -1;
+            }
+        } 
+        products.sort(compareSold);
+        function printProducts(products){
+            for(i = 0; i < products.length; i++){
+                console.log("name: "+products[i].name +", calories: "+products[i].calories +", color: "+products[i].color+", sold: "+ products[i].sold);
+            }
+        }
+        console.log("Product sorted by sold: ")
+        // printProducts(products);
+        console.log(products);
+        function compareName(colaA, colaB){
+            if(colaA.name > colaB.name){
+                return 1;
+            }else if(colaA.name === colaB.name){
+                return 0;
+            }else{
+                return -1;
+            }
+        }
+
+        products.sort(compareName);
+        console.log("Product sorted by name: ");
+        console.log(products);
+
+        function compareCalories(colaA, colaB){
+            if(colaA.calories > colaB.calories){
+                return 1;
+            }else if(colaA.calories === colaB.calories){
+                return 0;
+            }else{
+                return -1;
+            }
+        }
+
+        products.sort(compareCalories);
+        console.log("Products sorted by calories: ");
+        console.log(products);
+
+        function compareColor(colaA, colaB){
+            if(colaA.color > colaB.color){
+                return 1;
+            }else if(colaA.color === colaB.color){
+                return 0;
+            }else{
+                return -1;
+            }
+        }
+
+        products.sort(compareColor);
+        console.log("Products sorted by color");
+        console.log(products);
+    </script>
+</body>
+</html>

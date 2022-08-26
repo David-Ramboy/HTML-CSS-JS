@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // .push creating an array next to available space of an array------------------------
+
+
+        // var genres = []
+        // genres.push("rockabily");
+        // genres.push("jazzlittle");
+        // genres.push("likely")
+        // var size = genres.length;
+        // alert(size);
+
+
+        // ========= spares array are creating spaces betwwen array and left it undefined
+
+
+        // var sparesArray=[]; 
+        // sparesArray[0] = true;
+        // sparesArray[18] = "yu";
+        // sparesArray[100] = "hi";
+        // console.log(sparesArray)
+        // for(i = 0;i < sparesArray.length; i++){
+        //     if(sparesArray[i] == undefined){
+        //         console.log("dis is undefined");
+        //     }else{
+        //         console.log("all are have values")
+        //     }
+        // }
+        //------------- this is where i creating add includig adding by indeces ad pushing an array.------------------
+        // var myArray = [];
+        // myArray = new Array(3);
+        // myArray[0] = "hi";
+        // myArray[1] = "hello"
+        // myArray[2] = "What's up"
+        // myArray.push("hey")
+        // myArray[4] = "Yo ho"
+        // // console.log(myArray);
+    
+        //  ---------------------------------------------------------- 
+        // to display index only use [var i only] if you want to display the value of that indexes use the var name of array varName[i];
+        // var scores = [60, 50, 60, 58, 54, 54, 58, 50, 52, 54, 48, 69,
+        //             34, 55, 51, 52, 44, 51, 69, 64, 66, 55, 52, 61,
+        //             46, 31, 57, 52, 44, 18, 41, 53, 55, 61, 51, 44]
+        // for(i = 0; i < scores.length; i++){
+        //     console.log(scores[i]);
+        // }
+
+               
+        var scores = [60, 50, 60, 58, 54, 54, 58, 50, 52, 54, 48, 69,
+            34, 55, 51, 52, 44, 51, 69, 64, 66, 55, 52, 61,
+            46, 31, 57, 52, 44, 18, 41, 53, 55, 61, 51, 44]
+        var output;
+        var highScore = 0;
+
+        for(i = 0; i < scores.length; i++){
+            output = "Bubble solution " + i + " score: " + scores[i];
+            console.log(output);
+            if(scores[i] > highScore){
+                highScore = scores[i]
+            }
+        }
+        console.log("Bubbles tests: " + scores.length);
+        console.log("Highest bubbles score: "+ highScore);
+
+        var bestSolutions = [];
+        for(var i = 0; i < scores.length; i++){
+            if(scores[i] == highScore){
+                bestSolutions.push(i);
+                // bestSolutions[i] = i;
+
+            }            
+        }
+        console.log("Solution with highest score: " + bestSolutions);
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+body{
+    background-color: aqua;
+    margin:10px;
+    font-size: 6px;
+}
+.carrot-img{
+    max-width: 100%;
+    height: auto;
+
+}
+.container{
+    display: grid;
+    grid-gap:10px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.item{
+   padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.5);
+    display: grid;
+    margin: 10px;
+    grid-gap:10px;
+    grid-template-columns: 150px 1fr;
+}
+

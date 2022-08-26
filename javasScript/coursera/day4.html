@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function message(msg){
+            document.getElementById('output').innerHTML = msg + " event";
+        }
+        function displayDate(){
+            document.getElementById('demo').innerHTML = Date();
+        }
+    </script>
+</head>
+<body onload="message('LOAD')" onresize="message('RESIZE')">
+    <h1 onclick="message('CLICK')">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ratione esse quibusdam vero sed. Eos eveniet optio commodi. Pariatur ad asperiores labore odio, provident temporibus cupiditate eum eos voluptatibus? Voluptatibus.</h1>
+    <p id="output"></p>
+
+    <button type="button" onclick="displayDate()">
+        click me
+    </button>
+    <p id="demo"></p>
+    
+  
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="select">
+       <option>dd</option>
+    </select>
+
+    <p id="joke">d</p>
+    <p id="ct">d</p>
+    <p id="choose">d</p>
+    
+    <script>
+        let select = document.getElementById('select')
+        let joke = document.getElementById('joke')
+        let ct = document.getElementById('ct')
+        let choose = document.getElementById('choose')
+        function getCategory(){
+            let url = ""
+            fetch('https://api.chucknorris.io/jokes/categories')
+            .then(res => res.json())
+            .then(data => {
+                for(var i = 0; i < data.length; i++){
+                    elem = data[i]
+                    el = document.createElement("option");
+                    el.setAttribute("class", "eachoption")
+                    el.textContent = elem;
+                    el.value = elem;
+                    el.id = elem;
+                    select.appendChild(el);
+                    
+                    let nurl = "https://api.chucknorris.io/jokes/random?category="+el.id;
+                    function catJoke(){
+                        fetch(nurl)
+                        .then(res => res.json())
+                        .then(data => {
+                            joke.innerHTML = data.value;
+                            ct.innerHTML = data.categories;
+                            console.log(nurl)
+                        })
+                    }
+                  
+                   
+                }
+               
+              
+                
+
+
+               
+            })
+
+          
+        }
+        getCategory();
+        
+        select.addEventListener('change', function(){
+            console.log(this.value)
+        })
+      
+    </script>
+</body>
+</html>

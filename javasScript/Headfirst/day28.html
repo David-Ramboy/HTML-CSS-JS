@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var secret = "007";
+        
+        // function getSecret(){
+        //     var secret = "008";
+        //     function getValue(){
+        //         return secret;
+        //     }
+        //     return getValue();
+        // }
+
+        // console.log(getSecret());
+
+        // var secret = "007";
+        
+        // function getSecret2(){
+        //     var secret = "008";
+
+        //     function getValue(){
+        //         return secret;
+        //     }
+
+        //     return getValue;
+        // }
+        // var getValue = getSecret2();
+        // console.log(getValue());
+      //pass by value  
+// function Passbyvalue(y, z) {
+// var tmp; 
+// tmp = z; // 2
+// z = y; // 1
+// y = tmp; // 2
+// console.log("inside calling Pass by value Function " + "y = " + y + "z =" + z );
+
+// }
+// var y = 1;
+// var z = 2;
+// console.log("before calling Pass by value Function " + "y = " + y + "z =" + z );
+
+// Passbyvalue(y, z);
+// console.log("After calling Pass by value Function " + "y = " + y + "z =" + z );
+//     // pass by reference
+// function Passbyobj(obj){
+//     var temp = obj.y; // 5
+//     obj.y = obj.z; // 10
+//     obj.z = temp; // 5
+//     console.log("inside calling Pass by value Function " + "y = " + obj.y + "z =" + obj.z );
+    
+// }
+// var obj = {
+//     y:5,
+//     z:10
+// }
+// console.log("before calling Pass by value Function " + "y = " + obj.y + "z =" + obj.z );
+// Passbyobj(obj);
+// console.log("After calling Pass by value Function " + "y = " + obj.y + "z =" + obj.z );
+// javascript pass by reference
+
+// var fido = {
+//     name: "Fido",
+//     weight: 150,
+//     breed: "Mixed",
+//     loves: "walks"
+// }
+
+// console.log("before calling the fido")
+
+// console.log(fido)
+// if(fido.weight == 150){
+//     console.log("true")
+// }else{
+//     console.log("false")
+// }
+// if(fido.house == "mini"){
+//     console.log("there is mini house in before calling fido")
+// }else{
+//     console.log("there no is mini house in before calling fido")
+// }
+
+// var loseWeight = function(fido, amount){
+//     fido.weight = fido.weight - amount;
+//     fido.house = "mini"
+//     console.log("inside call the fido in the function")
+//     console.log(fido)
+// }
+
+// loseWeight(fido, 100)
+// if(fido.weight == 150){
+//     console.log("true")
+// }else{
+//     console.log("false")
+// }
+
+// console.log("after calling the fido object in a function")
+// console.log(fido)
+// if(fido.weight == 150){
+//     console.log("true")
+// }else{
+//     console.log("false")
+// }
+(function(food){
+    if(food==="cookies"){
+        console.log("More please")
+    }else if(food === "cake"){
+        console.log("Yum yum")
+    }
+})("cookies");
+
+
+var foodie = function(food){
+    if(food === "cookies"){
+        console.log("More please1")
+    }else if(food === "cake"){
+        console.log("Yum yum")
+    }
+}
+
+foodie("cookies")
+    </script>
+
+</body>
+</html>

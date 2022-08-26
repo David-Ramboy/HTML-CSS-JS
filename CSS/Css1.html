@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS</title> 
+        <link rel="stylesheet" href="../" type="text/css">
+        
+        <style>
+            :root{
+                --text-red: red;
+            }         
+            body {
+                
+                background-color: cyan;
+                color: darkblue;
+                
+            }
+            #red {
+                color: red;
+            }
+            .violet-text{
+                color: violet;
+            }
+            .pink-text {
+                color: pink !important;
+            }
+            
+            [type='radio']{
+                margin: 20px;
+            }
+            #Green {
+                color: green;
+                background-color: greenyellow;
+                text-align: center;
+                font-size: 20px;
+            }
+            p {
+                font-size: 30px;
+                font-family: Audiowide, monospace;
+            }
+            .red-text {
+                color: red;
+                font-size: 60px;
+            }
+            h2 {
+                font-family: Audiowide;
+                background-color: blue;
+            }
+            .larger-image{
+                width: 10%;
+                border-color: blue;
+                border-width: 10px;
+                border-style: solid;
+                border-radius: 50%;
+                padding: 1.5em;
+            }
+            .margin {
+                
+                text-align: center;
+                background-color: yellow;
+                margin: 40%;
+                margin-top: 0%;
+                margin-bottom: 0%;
+                padding-top: 5%;
+                padding-bottom: 5%;
+                background-size: 10%;
+                border-color: black;
+                border-style: solid;
+                border-width: 5px;
+
+            }
+            .padding{
+                text-align: center;
+                background-color: red;
+                margin: 10%;
+                border-color: #000000;
+                border-style: solid;
+                border-width: 5px;
+                padding: 10px;
+            }
+            .padding-two{
+                text-align: center;
+                background-color: blue;
+                margin: 10%;
+                border-color: black;
+                border-style: solid;
+                border-width: 5px;
+                padding: 10px;
+                
+            }
+            .red {
+                background-color: var(--text-red);
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <!--styling classes-->
+        <!--block style-->
+        <!--Font size and font property-->
+       <header id="Green">
+           Title Here
+       </header>
+
+        <!--Inline style-->
+        <p style="color: aqua;">Hi my name is david</p>
+        <p>nice to meet you</p>
+        <div>
+            <ul>
+                <!--multiple classes in an element-->
+                <li class="red-text">fischl</li>
+                <li class="red-text">childe</li>
+                <li>zhongli</li>
+            </ul>
+
+        </div>
+        <h2>Hi im broke</h2>
+        <p>We are not</p>
+        <!--Size image-->
+
+        <img class="larger-image" src="th.jpg" alt="game">
+        <!--adjust the padding-->
+        <!--adjust the margin-->
+        <!--add negative margin to an element-->
+        <!--add padding to each side of an element-->
+        <!--add margin to each side of an element-->
+        <!--use clockwise notation to specify the padding of an element-->
+        <!--use clockwise notation to specify the padding of an element-->
+        <section class="margin"> 
+            <p>margin</p>
+            <p class="padding">padding</p>
+            <p class="padding-two">padding</p>
+        </section>
+        <!--Use Attribute selectors to style elements-->
+        <form>
+            <label><input type="radio" name="outdoor-indoor" checked>indoor</label>
+        </form>
+        <!--understand absolute versus relative units-->
+        <!--style the html body elements-->
+        <!--Inherent styles from the body element-->
+        <!--Priotize One style over another-->
+        <h1 class="pink-text violet-text" id="red" style="color: white;">high</h1>
+        <!--override style in subsequent CSS-->
+        <!--override class declaration by styling ID Attributes-->
+        <!--Override Class Declarations with Inline Styles-->
+        <!--Override all other style by using !important-->
+        <!--Use hexcode for specific colors red, green, blue-->
+        <!--Use CSS variables to change several elements at once-->
+        <p class="red"> high class </p>
+        <!--create a custom css Variables --penguin-skinL:gray;-->
+        <!--attach a fallback value to css variables-->
+        <!--Cascading CSS Variables-->
+        <!--Change a variable for a specific area (it ccan be ovewrite)-->
+        <!--Use a media query to change a variable it (it changed depending on size of the webpage)-->
+        <!--Create Your First CSS Grid-->
+        </body>
+</html> 

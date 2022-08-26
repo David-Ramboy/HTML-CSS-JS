@@ -1,0 +1,27 @@
+[
+    {
+        "id":1,
+        "image":"bike-1.jpeg",
+        "name":"bike-orial",
+        "price":"22202.1",
+        "quantity": 1
+    },{
+        "id":2,
+        "image":"bike-2.jpeg",
+        "name":"dark-bike-forest",
+        "price":"20000.20",
+        "quantity": 1
+    },{
+        "id":3,
+        "image":"bike-3.jpeg",
+        "name":"ocean-bike",
+        "price":"30000.10",
+        "quantity": 1
+    },{
+        "id":4,
+        "image":"bike-4.jped",
+        "name":"jungle-bike",
+        "price":"400000",
+        "quantity": 1
+    }
+]

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Playlist</title>
+    <script>
+        // function addSong(){
+        //     var song1 = document.getElementById("song1");
+        //     var song2 = document.getElementById("song2");
+        //     var song3 = document.getElementById("song3");
+        //     song1.innerHTML = "Blue Suede String, by Elvis Pagely";
+        //     song2.innerHTML = "Great Objects on Fire, by Jerry JSON lewis";
+        //     song3.innerHTML = "I code the Line, by Johnny Javascript"
+        // }
+        // window.onload = addSong;
+        function init(){
+            var planet = document.getElementById("greenplanet");
+
+            // planet.innerHTML = "Red Alert: hit  by phaser fire";
+            // planet.setAttribute("class","redtext"); // add new or change existing attribute // there are two arguments first is the name of the attribute and second is the value of that attribute.
+            var scoop = planet.getAttribute("class"); // Make you pass in getAttribute is the class id or alt
+            console.log(scoop)
+
+            if (scoop == null){
+                console.log("Oh Iguess there isn't an alt attribute.");
+            }else{
+                console.log("I can't see the image in the console,");
+                console.log("but i'm told it look like: " + scoop)
+            }
+        }  
+        window.onload = init;
+    </script>
+    <style>
+        .redtext{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1>My Awesome Playlist</h1>
+    <ul id="playlist">
+        <li id="song1"></li>
+        <li id="song2"></li>
+        <li id="song3"></li>
+    </ul> -->
+    <h1>Green Planet</h1>
+    <p id="greenplanet" class="redtext" alt="dr">All is well</p>
+    <h1>Red Planet</h1>
+    <p id="redplanet">Nothing to report</p>
+    <h1>Blue Planet</h1>
+    <p id="blueplanet">All systems A-Ok</p>
+</body>
+</html>

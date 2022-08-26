@@ -1,0 +1,30 @@
+*,::after,::before{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.nav{
+    background-color: #2E323F;
+    display: flex;
+}
+li{
+    list-style: none;
+}
+a:link, a:active{
+text-decoration: none;
+}
+.menu{
+    display: flex;
+}
+.list{
+    display: flex;
+}
+.hero{
+    background-color: #3B4050;
+    padding: 100px 0;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+    
+}

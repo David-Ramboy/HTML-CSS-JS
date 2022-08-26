@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+        }
+        .box1,.box2{
+            width: 100px;
+            height: 100px;
+        }
+        .box1{
+            background-color: blue;
+        }
+        .box2{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="box1"></div>
+    <div class="box2"></div>
+    </div>
+    <button id="btn">Shuffle It</button>
+    <!-- <script src="index.js">
+        
+    </script> -->
+    <script>
+        let box1 = document.querySelector(".box1");
+        let box2 = document.querySelector(".box2");
+        let btn = document.querySelector('#btn');
+
+        btn.addEventListener('click',function(){
+            let temp;
+            temp = box2.className;
+            box2.className = box1.className;
+            box1.className = temp;
+        })
+
+    // var a;
+    // var b;
+    // var c;
+    // // Only change code above this line
+
+    // a = a + 1;
+    // b = b + 5;
+    // c = c + " String!";
+    // console.log(a,b,c)
+
+    // // var and let
+    // // var can override value
+    // // the let cannot be override we only use one ler name
+
+    // let name = "james";
+    // let name = "david";
+    // console.log(name)
+    </script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+          var passengers = [{name:"Jane Doloop", paid:true, ticket: "premiumEconomy" },
+                        {name:"Dr.Evel", paid: true, ticket: "firstclass"},
+                        {name:"Sue Property" ,paid: false, ticket: "firstclass"},
+                        {name: "John Funcall", paid: true, ticket: "coach"}]
+
+    function processPassengers(passengers, testFunction){
+        for(var i = 0; i < passengers.length; i++){
+            if(testFunction(passengers[i])){
+                return false;
+            }
+        }
+        return true;
+    }
+    // true
+    // false
+    // false
+    // true
+    function checkNoFlyList(passenger){
+        return(passenger.name === "Dr.Evel");
+    }
+
+    function checkNotPaid(passenger){
+        return(!passenger.paid);
+    }
+
+    var allCanFly = processPassengers(passengers, checkNoFlyList);
+    if(!allCanFly){
+        console.log("The place can't take off: we have a passenger on the no-fly-list.");
+    }
+
+    var allPaid = processPassengers(passengers, checkNotPaid);
+    if(!allPaid){
+        console.log("The plane can't take off: not everyone has paid");
+    }
+
+    function printPassenger(passenger){
+        var message = passenger.name 
+        if(passenger.paid === true){
+            message = message +" "+"has paid"
+        }else{
+            message = message +" "+"has not paid"
+        }
+        console.log(message);
+        return false
+    }
+    // console.log(printPassenger())
+    processPassengers(passengers,printPassenger);
+    //-----------------------------PASSENGER DRINKS-----------------------
+    // sam
+    function serveCustomer(passenger){
+        console.log("---------------------------------------")
+
+        var getDrinkOrderFunction = createDrinkOrder(passenger);
+        getDrinkOrderFunction();
+        var getDrinkOrderFunction = createDinnerOrder(passenger);
+        //get dinner order
+        getDrinkOrderFunction();
+
+        //show movie
+        // pick up trash
+    }
+    function createDrinkOrder(passenger){
+        var orderFunction;
+
+        if(passenger.ticket === "firstclass"){
+            orderFunction = function(){
+                console.log("Would you like a cocktail or wine?")
+            }; 
+        }else if(passenger.ticket == "premiumEconomy"){
+            orderFunction = function(){
+                console.log("Would you like wine in addition to cola or water?")
+            }
+        } 
+        else {
+            orderFunction = function(){
+                console.log("Your choice is cola or water.")
+            };
+        }
+
+        return orderFunction;
+    }
+    
+    function createDinnerOrder(passenger){
+        var orderFunction;
+
+        if(passenger.ticket === "firstclass"){
+            orderFunction  = function(){
+                console.log("Would you like chicken or pasta?");
+            }
+        }else if(passenger.ticket === "premiumEconomy"){
+            orderFunction  = function(){
+                console.log("Would you like snack box or cheese plate?");
+            }
+        }else{
+            orderFunction  = function(){
+                console.log("Would you like Peanuts or pretzels?");
+            }
+        }
+        return orderFunction
+    }   
+ 
+
+    function servePassengers(passengers){
+        for(var i = 0; i < passengers.length; i++){
+            serveCustomer(passengers[i])
+            
+        }
+        console.log("---------------------------------------")
+
+    }
+    
+    servePassengers(passengers);
+    </script>
+</body>
+</html>

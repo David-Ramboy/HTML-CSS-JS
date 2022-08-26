@@ -1,0 +1,42 @@
+
+.grid-container{
+    display: grid;
+    /* grid-template-columns: 2fr 1fr; */
+    grid-template-columns: 200px 250px;
+    /* grid-template-columns: repeat(4, 100px); */
+    /* grid-auto-rows: 150px; */
+    /* grid-template-rows: 200px 150px; */
+    grid-auto-rows: minmax(150px, auto);/*to not overflow instead to grow to that size
+    now the empty block or text will become 150px*/
+    /* grid-row-gap: 10px; */
+    /* grid-column-gap: 10px; */
+    grid-gap: 10px;
+    /* grid-template-areas: 
+    "header header"
+    "sidebar content"
+    "sidebar content"; */
+    justify-content: start; /* start/end/center/inherit/ */
+    align-content: start;
+    height: 100vh;
+    align-items: stretch;
+    justify-items: stretch;
+} 
+.grid-item-1{
+    /* grid-area: header; */
+    /* grid-column-start:1;
+    grid-column-end:3; /*grid-column-end:-1; negative it goes 
+    across row it corresponds to the farthest of the column*/
+    /* grid-column: 1 / -1; short */
+    align-self:  stretch;
+    justify-self: stretch;
+}
+.grid-item-2{
+    /* grid-area: sidebar; */
+    /* grid-row: 2 / 4; */
+    /* grid-row: span 2; */
+} 
+.grid-item-3{
+    /* grid-area: content; */
+    /* grid-row: 2 / 4; */
+    /* grid-row: span 2; */
+}

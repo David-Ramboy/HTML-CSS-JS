@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+          function Robot(name, year, owner){
+            this.name = name;
+            this.year = year;
+            this.owner = owner;
+        }
+        
+        Robot.prototype.toString = function(){
+            return this.name + " Robot belonging to " + this. owner;
+        }
+
+
+        Robot.prototype.leage = "stivk"
+
+        var toy = new Robot("Toy", 2013, "Avary");
+
+        function ShowRobot(name, owner){
+            this.name = name
+            this.owner = owner;
+        }
+
+        ShowRobot.prototype =new Robot();
+        ShowRobot.prototype.constructor = ShowRobot;
+        ShowRobot.prototype.late = function(){
+            console.log("sorry im late")
+        }
+        var cot = new ShowRobot("hiny", "david")
+
+        // console.log(toy.toString());
+        
+        console.log("ehey" + toy);
+
+        console.log(cot.leage);
+
+        // is prototypeOf
+        console.log(Robot.prototype.isPrototypeOf(toy))
+        console.log(Robot.prototype.isPrototypeOf(cot))
+        console.log(cot.constructor)
+
+        var objorim={
+        ky : 1,
+        two : 2
+        }
+        objorim.valueOf = function(){
+            return objorim.ky + objorim.two;
+        }
+
+        var test = objorim.valueOf();
+            console.log(test)
+
+        //String object
+
+        console.log(String.constructor)
+
+
+        String.prototype.cliche = function(){
+            var cliche = ["lock and load","touch base","open the kimono"]
+            
+            for(var i = 0; i < cliche.length; i++){
+                var index = this.indexOf(cliche[i]);
+                if(index >= 0){
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        var sentences = ["I'll send my car around to pick you up.", "Let's touch base in the morning and see where we are","We don't want to open the kimono, we just want to inform them."];
+
+        for(var i = 0; i < sentences.length; i++){
+            var phrase = sentences[i];
+            if(phrase.cliche()){
+                console.log("Cliche alert" + phrase);
+            }
+        }
+
+        //
+        // String.prototype.palindrome = function(){
+        //     var len = this.length-1;
+        //     for(var i = 0; i <= len; i++){
+        //         if(this.charAt(i) !== this.charAt(len-i)){
+        //             return false;
+        //         }
+        //         if(i == (len - i)){
+        //             return true;
+        //         }
+        //     }
+        //     return true;
+        // };
+
+        // super advance Solution
+        String.prototype.palindrome = function(){
+            var r = this.split("").reverse().join("");
+            return (r === this.valueOf());
+        }
+
+        var phrases = ["eve","kayak","mom","wow","Not a palindrome"];
+
+        for(var i = 0; i < phrases.length; i++){
+            var phrase = phrases[i];
+            if(phrase.palindrome()){
+                console.log("'"+ phrase + "' is a palindrome")
+            } else {
+                console.log("'" + phrase + "' is Not a palindrome");
+            }
+        }
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function CarProtoype() {
+            this.make = "Ferari"
+            this.model = "F9"
+            this.color = "red"
+            this.passenger = 4;
+            this.year = "2022";
+            this.start = function(){};
+            this.stop = function(){};
+            this.drive = function(){};
+        }
+        var Ferari = new CarProtoype();
+        Ferari.yeet = "yebow"
+        var ferrari2 = new CarProtoype();
+        ferrari2.yeet = "just kidding";
+        console.log(Ferari)
+        console.log(ferrari2);
+            
+    </script>
+</body>
+</html>

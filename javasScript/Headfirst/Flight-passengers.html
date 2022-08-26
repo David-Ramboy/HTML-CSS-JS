@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="show"></p>
+    <p id="show"></p>
+    <p id="show"></p>
+    <p id="show"></p>
+    <script>
+        // var passengers = [{name:"Jane Doloop", paid:true},
+        //                 {name:"Dr.Evel", paid: true},
+        //                 {name:"Sue Property" ,paid: false},
+        //                 {name: "John Funcall", paid: true}]
+        //No fly list
+        // Paid costumer
+        //list paasenger
+      
+    //     var noFly = function(paid){
+    //         return paid = [];
+    //     }
+    //     noFly = noFly(paid);
+
+    //    function paid(array){    
+    //         for(i = 0; i < passengers.length; i++){
+    //             var passenger = passengers[i]
+    //             var passengerName = passenger.name;
+    //             var passengerPaid = passenger.paid;
+    //                 if(passengerPaid == true){
+    //                      array.push(passengerName+ ":" + "Paid")
+    //                 }else{
+    //                      array.push(passengerName+ ":" + "NotPaid")
+    //                 }
+    //         }
+    //     }
+    //     paid(noFly);
+    // //=====================================================================
+    // var passenger = passengers;
+
+    // function checkNoFlyList(passenger){
+    //     var flyList = [];
+
+    //     for(var i = 0; i < passenger.length; i++){
+            
+        
+    //         if(checkNotPaid(passenger) == passenger[i].paid) {
+    //             flyList.push(passenger[i]);
+               
+    //         }
+    //     }
+    //     return flyList;
+
+    // }
+
+    // function checkNotPaid(passenger){
+    //     for(var i = 0; i < passenger.length; i++){
+
+    //         if(!passenger[i].paid){
+    //             return false        
+    //         }
+            
+    //     }
+    //     return true
+
+    // }
+    
+    // var test2 = checkNoFlyList(passenger);
+    // var test1 = checkNotPaid(passenger)
+    // console.log(test2)
+    // =============================================================================
+    
+    //     for(i = 0; i < noFly.length;i++){
+    //         var show = document.getElementsByTagName("p");
+    //         show[i].innerHTML = noFly[i];
+    //     }
+    //     console.log(noFly.length)
+    
+    // var passengers = [{name:"Jane Doloop", paid:true},
+    //                     {name:"Dr.Evel" ,paid: true},
+    //                     {name:"Sue Property" ,paid: false},
+    //                     {name: "John Funcall", paid: true}]
+    // function checkPaid(passengers){
+    //     for(var i = 0; i < passengers.length; i++){
+    //         if(!passengers[i].paid){
+    //             return false
+    //         }
+    //     }
+    //     return true;
+    // }
+    // console.log(checkPaid(passengers))
+    //================================================================
+    // function sayIt(translator){
+    //     var phrase = hawaian("Goodbye")
+    //     alert(phrase)
+    // }
+    // function hawaian(word){
+    //     if(word === "hello"){return "hallo"}
+    //     if(word === "Goodbye") {return "Olah"}
+    // }
+    // sayIt(hawaian)
+    //================================================
+    var passengers = [{name:"Jane Doloop", paid:true, ticket: "coach" },
+                        {name:"Dr.Evel", paid: true, ticket: "firstclass"},
+                        {name:"Sue Property" ,paid: false, ticket: "firstclass"},
+                        {name: "John Funcall", paid: true, ticket: "coach"}]
+
+    function processPassengers(passengers, testFunction){
+        for(var i = 0; i < passengers.length; i++){
+            if(testFunction(passengers[i])){
+                return false;
+            }
+        }
+        return true;
+    }
+    // true
+    // false
+    // false
+    // true
+    function checkNoFlyList(passenger){
+        return(passenger.name === "Dr.Evel");
+    }
+
+    function checkNotPaid(passenger){
+        return(!passenger.paid);
+    }
+
+    var allCanFly = processPassengers(passengers, checkNoFlyList);
+    if(!allCanFly){
+        console.log("The place can't take off: we have a passenger on the no-fly-list.");
+    }
+
+    var allPaid = processPassengers(passengers, checkNotPaid);
+    if(!allPaid){
+        console.log("The plane can't take off: not everyone has paid");
+    }
+
+    function printPassenger(passenger){
+        var message = passenger.name 
+        if(passenger.paid === true){
+            message = message +" "+"has paid"
+        }else{
+            message = message +" "+"has not paid"
+        }
+        console.log(message);
+        return false
+    }
+    // console.log(printPassenger())
+    processPassengers(passengers,printPassenger);
+    //-----------------------------PASSENGER DRINKS-----------------------
+    // this is a sample of what a first class function
+    // first  class funtion is like a first class values it can declare as a variable can pass, pass a value/arguments to a function and return a value from function
+
+    // declare a variable using funtion
+    function serveCustomer(passenger){
+        var getDrinkOrderFunction = createDrinkOrder(passenger);
+        getDrinkOrderFunction() 
+        //get dinner order
+        //show movie
+        // pick up trash
+    }
+    // return a value from function
+    function createDrinkOrder(passenger){
+        var orderFunction;
+
+        if(passenger.ticket === "firstclass"){
+            orderFunction = function(){
+                console.log("Would you like a cocktail or wine?")
+            }; 
+        } else {
+            orderFunction = function(){
+                console.log("Your choice is cola or water.")
+            };
+        }
+
+        return orderFunction;
+    }
+
+    getDinnerOrderFunction
+    // pass  a value as arguments
+    function servePassengers(passengers){
+        for(var i = 0; i < passengers.length; i++){
+            serveCustomer(passengers[i])
+        }
+    }
+    
+    servePassengers(passengers);
+    
+    </script>
+</body>
+</html>

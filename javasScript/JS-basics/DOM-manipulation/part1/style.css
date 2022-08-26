@@ -1,0 +1,19 @@
+.container{
+    border: 1px solid black;
+    width: 500px;
+}
+li{
+    border: 1px solid black;
+    list-style: none;
+    width: 400px;
+}
+.title, #header-title, form, #box{
+    margin-left: 10px;
+}
+button{
+    width: 100%;
+}
+
+#box{
+    color: aliceblue;
+}

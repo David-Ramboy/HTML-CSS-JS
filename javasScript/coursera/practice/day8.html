@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+    <label>Email: <input id="email-1" type="email" name="email" required value="me@me.com"></label>
+    <label>Confirm Email:  <input id="email-2" type="email" name="email" required onchange="check()"></label>
+    <input type="submit">
+    </form>
+    <script>
+        function check(){   
+            var email1 = document.getElementById('email-1');
+            var email2 = document.getElementById('email-2');
+
+            if(email1.value != email2.value){
+                alert("This not match!");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

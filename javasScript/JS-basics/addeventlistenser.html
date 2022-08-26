@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="Hoverme">Hello guys im going to show how to disable mouseover event</p>
+    <script>
+        const hoverMe = document.querySelector('.Hoverme')
+        hoverMe.addEventListener('mouseover',() => {
+            //First 
+                // mouseover = !mouseover
+            // second
+                hoverMe.removeEventListener('mouseover')
+            hoverMe.textContent = 'HELLO WORLD'
+        })
+        //THANKSSS
+    </script>
+</body>
+</html>

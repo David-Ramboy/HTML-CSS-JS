@@ -1,0 +1,38 @@
+{
+    "users" : [
+        {
+            "name" : "David",
+            "age":29,
+            "isProgrammer" : true,
+            "skills" : ["HTML", "CSS", "Javascript"],
+            "address" : {
+                "city" : "Rizal",
+                "state" : "Binangonan",
+                "Country" : "Philippines"
+            }
+        },
+        {
+            "name" : "Carl",
+            "age":27,
+            "isProgrammer" : true,
+            "skills" : ["DB2", "MongoDB", "C#"],
+            "address" : {
+                "city" : "Rizal",
+                "state" : "Binangonan",
+                "Country" : "Philippines"
+            }
+        },
+        {
+            "name" : "Franz",
+            "age":24,
+            "isProgrammer" : false,
+            "skills" : [],
+            "address" : {
+                "city" : "Rizal",
+                "state" : "Binangonan",
+                "Country" : "Philippines"
+            }
+        }
+    ]
+
+}

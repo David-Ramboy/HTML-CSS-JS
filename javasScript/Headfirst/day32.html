@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function dogCatcher(obj){
+        //     if(obj instanceof Dog){
+        //         return true;
+        //     }else if(obj instanceof Cat){
+        //         return false
+        //     }
+        // }
+
+        // function Cat(name,breed, weight){
+        //     this.name = name;
+        //     this.breed = breed;
+        //     this.weight = weight;
+        // }
+        
+        // var meow = new Cat("Meow", "Siamese",10);
+        // var whiskers = new Cat("Whiskers", "Mixed", 12);
+        // var fido ={name: "Fido", breed:"Mixed", weight:38};
+        
+        // function Dog(name, breed, weight){
+        //     this.name = name;
+        //     this.breed = breed; 
+        //     this.weight = weight;
+        //     this.bark = function(){
+        //         if(this.weight > 25){
+        //             alert(this.name + " says Wolf")
+        //         } else {
+        //             alert(this.name + "says yip")
+        //         }
+        //     }
+        // }
+        // var fluffy = new Dog("Fluffy", "Poodie", 30);
+        // var spot = new Dog("Spot", "Chihuahua", 10);
+        // var dogs = [meow, whiskers, fido, fluffy, spot];
+
+        // for(var i = 0; i < dogs.length; i++){
+        //     if(dogCatcher(dogs[i])){
+        //         console.log(dogs[i].name + " is a dog")
+        //     }else {
+        //         console.log(dogs[i].name + " is a cat")
+        //     }
+            
+        // }
+        //
+        // function Dog(name, breed, weight){
+        //     this.name = name;
+        //     this.breed = breed; 
+        //     this.weight = weight;
+        //     this.bark = function(){
+        //         if(this.weight > 25){
+        //             alert(this.name + " says Wolf")
+        //         } else {
+        //             alert(this.name + "says yip")
+        //         }
+        //     }
+        // }
+        // var fluffy = new Dog("Fluffy", "Poodie", 30);
+        // var spot = new Dog("Spot", "Chihuahua", 10);
+        // var fido = new Dog("Fido", "Mixed" ,38);
+        // fido.owner = "bob";
+        // delete fido.weight 
+        // fido.trust = function(person){
+        //     return (person === "dog")
+        // }
+        // var testTrust = fido.trust("dog");
+        // var testTrust = fido.trust("dog")
+
+        // console.log(fluffy,spot,fido);
+        // console.log(testTrust);
+        // dogCatcher(fluffy)
+        
+        // function dogCatcher(obj){
+        //     if(obj instanceof Dog){
+        //         return true;
+        //     }else if(obj instanceof Cat){
+        //         return false
+        //     }
+        // }
+
+        // var cadiParam = {
+        //     make:"GM", model:"Cadillac", year:1955, color:"tan", passanger: 5, convertible: false, mileage: 12892
+        // }
+        // var cadi = new Car(cadiParam);
+        // function Car(param){
+        //     this.make = param.make;
+        // }
+
+        // cadi.chrome = true;
+        // delete cadi.make
+        // delete cadi.chrome
+
+        // if(cadi instanceof Car){
+        //     console.log("true")
+        // }
+        // var now =new Date();
+        
+        // var dateString = now.toString();
+        // var theYear = now.getFullYear();
+        // var theDayOfWeek = now.getDay();
+
+        // var birthday = new Date("May 8, 1983");
+        // var theDayOfWeek1 = birthday.getDay();
+
+        // console.log(now)
+        // console.log(dateString)
+        // console.log(theYear)
+        // console.log(theDayOfWeek)
+
+        // console.log(birthday)
+        // console.log(theDayOfWeek1)
+            /// Date object
+        var d;
+        
+        d = new Date();
+        // d = new Date(1164411006456);
+        // d = new Date("2022-04-10T10:17:00+10:00")
+        d = new Date(2021, 3, 10, 7, 66, 0, 0   );
+        console.log(d.toString())
+        console.log(d.getFullYear())
+        console.log(d.getMonth())
+        console.log(d.getDate())
+        console.log(d.getMinutes());
+        console.log(d.getMilliseconds());
+        console.log(d.getUTCHours());
+
+        d.setDate(5);
+        d.setUTCHours(5)
+        console.log(d.toString())
+        console.log(d.toISOString())
+        console.log(d.toLocaleString("en-AU",{timeZone:"America/Los_Angeles"}));
+        console.log(d.toLocaleString("en-US"));
+        console.log(JSON.stringify({Date:d}))
+
+        
+    </script>
+</body>
+</html>

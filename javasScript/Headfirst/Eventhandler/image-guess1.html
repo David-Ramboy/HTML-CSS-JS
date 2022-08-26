@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            display: inline-block;
+            max-width: 250px;
+            border: 1px solid black;
+        }
+        img + img{
+            margin-left: 103px;
+
+        }
+    </style>
+</head>
+<body>
+    <img id="zero" src="zero-blurred.jpg">
+    <img id="one" src="one-blurred.jpg">
+    <img id="two" src="two-blurred.jpg">
+    <img id="three" src="three-blurred.jpg" >
+    <script>
+        // click image to deblur ------------------------------------------
+        // window.onload = init;
+       
+        // function init(){
+        //   var images = document.getElementsByTagName("img");
+        //   for(i = 0; i < images.length; i++){
+        //       images[i].onclick = showAnswer; 
+        //   }
+        // }
+        // function showAnswer(eventObj){
+        //     var image = eventObj.target;
+    
+        //     var name = image.id;
+        //     name = name + ".jpg";
+        //     image.src = name; 
+        // }
+        // re-blur after the image click of them  with timer----------------------------------
+        window.onload = init;
+       
+        function init(){
+            var images = document.getElementsByTagName("img");
+            for(i = 0; i < images.length; i++){
+                images[i].onclick = showAnswer; 
+            }   
+        }
+        function showAnswer(eventObj){
+            var image = eventObj.target;
+            var name = image.id;
+            name = name + ".jpg";
+            image.src = name; 
+
+            setTimeout(function(){
+                var name = image.id;
+                name = name + "-blurred.jpg";
+                image.src = name;
+            }, 2000);
+        }
+        // retouch and use the closure method
+        // function reblur(image){
+        //     var name = image.id;
+        //     name = name + "-blurred.jpg";
+        //     image.src = name;
+        // }
+    // ///--------------------------------------------------------------
+    //     window.onload = function() {
+    //       var images = document.getElementsByTagName("img");
+    //       for(i = 0; i < images.length; i++){
+    //         //   images[i].onclick = showAnswer; 
+    //         images[i].onmouseover = showAnswer;
+    //         images[i].onmouseout = reblur;
+    //       }
+    //     };
+
+    //     function showAnswer(eventObj){
+    //         var image = eventObj.target;
+                
+    //         var name = image.id;
+    //         name = name + ".jpg";
+    //         image.src = name; 
+    //     }
+
+    //     function reblur(eventObj){
+    //         var image = eventObj.target;
+
+    //         var name = image.id;
+    //         name = name + "-blurred.jpg";
+    //         image.src = name;
+
+    //     }
+
+
+    </script>
+</body>
+</html>

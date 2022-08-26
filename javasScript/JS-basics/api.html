@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+            fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772`)
+            .then(response => response.json())
+            .then(data => { 
+                // for(i = 0; data[0].strMeasure[i])
+                
+                console.log(data.meals[0].strIngredient1)
+                console
+            })
+        </script>
+    </body>
+</html>         

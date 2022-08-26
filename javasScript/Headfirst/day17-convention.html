@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="weatherDiv"></div>
+    <script>
+        // =================== dealing with undefined=====================
+        // var x;
+        // if(x == undefined){
+        //  console.log("hi")
+        // }
+        // var customer = {
+        //     name:"kris",
+        //     callme:"fi"
+        // }
+        // if(customer.callme == undefined){
+        //     console.log("this is undefined");
+        // }else{
+        //     console.log("There's a value");
+        // }
+        // var hereIs = {
+        //     subject:"Hey dad",
+        //     car:false
+        // }
+        // hereIs.house = 123;
+        // hereIs.tent = "wood";
+        //----------------------------------------- Typeof
+        // for(var test in hereIs){
+        //     // console.log(typeof hereIs[test])
+        // }
+        // var testIt = [
+        //     "hey", 123, false
+        // ]
+        // for(var test in testIt){
+        //     console.log(typeof testIt[test])
+        // } 
+        // console.log(testIt);  
+        // var test1 = "abcdef";
+        // var test2 = 123;
+        // var test3 = true;
+        // var test4 = {};
+        // var test5 = [];
+        // var test6;
+        // var test7 = {"abcdef" : 123};
+        // var test8 = ["abcdef" , 123];
+        // function test9(){return "abscdef"}
+        // console.log(test9());
+        // console.log(typeof test1);
+        // console.log(typeof test2);
+        // console.log(typeof test3);
+        // console.log(typeof test4);
+        // console.log(typeof test5);
+        // console.log(typeof test6);
+        // console.log(typeof test7);
+        // console.log(typeof test8);        
+        // console.log(typeof test9);
+        // var test = document.getElementById("ddd");
+        // console.log(test);
+        //========================== Dealing with null =========
+        // null is a type off object
+        // var nul = null;
+        // console.log(typeof nul)
+        // /=====================
+        // var test10 = null;
+        // console.log(test10);
+            // var weather = document.getElementById("weatherDiv");
+            // if(weather != null){
+            //     console.log("yeah it's not null")
+            // }
+        // ================================= Nan---------------
+        // nan is not equal to anything // NaN - Not a Number
+        // var a = 0/0;
+        // var b = "food" * 1000;
+        // var c = Math.sqrt(-9);
+        // console.log(a);
+        // console.log(b);
+        // console.log(c)
+                // to test Nan use "isNaN"
+        // myNum = 0/0;
+        // if(isNaN(myNum)){
+        //     // console.log("Its true a not a number");
+        // }else{
+        //     // console.log("A number");
+        // }
+        // // console.log(typeof myNum)
+        // myNum2 = 10/0;
+        // if(myNum2 == Infinity){
+        //     // console.log("this is big tamale")
+        // }
+        // //---------------------------
+        // var testme = "99";
+        // console.log(typeof testme + " this is '99'")
+        // var testme2 = 99;
+        // console.log(typeof testme2 + " this is 99");
+
+        // if(testme2 == testme){
+        //     console.log("A number is equals a string")
+        // }else{
+        //     console.log("No way a number is equals a string")
+        // }
+       // ----- "=="/"!=" Type of convertion defined in Ecma 5 https://262.ecma-international.org/5.1/#sec-11.9.3
+    //    //Case#1 number to string
+    //    if(99 == "vanilla"){                    // this result is false becasue the string vanilla converts to Nan equal to 99 which is false
+    //        console.log("true")                 // because js is try to convert string to a number which is fail.
+    //    }else{
+    //        console.log("false")
+    //    }
+    //    //Case#2 number to bolean
+    //    if(1 == true){
+    //     console.log("true")                 // true is equal to one and false is equal to 0 .. so the true converts to 1 or a type number
+    //                                         // to become equal to the 1.
+    //    }else{
+    //     console.log("false")
+           
+    //    }
+    //    //Case#2 string to number
+    //    if("1" == true){              // this is have a lot of steps to become equal to each other first is equal to 1 and the the string will match to the number type 
+    //                                 // which is one and the string coverts to number type and become 1 and it mactches to become true/equal.
+    //     console.log("true")                
+
+    //    }else{
+    //     console.log("false")
+           
+    //    }
+    //    //Case#3 undefined to null
+    //    if(undefined == null){
+    //     console.log("true")             // this to represent to has no value that's why they are equal.
+    //    }else{
+    //     console.log("false")
+    //    }
+    //    // Case#4
+    //    if(1 == ""){                 // the double qoute or a string we will convert it to number which is in case#1 and it become 0
+    //        console.log("true");      
+    //    }else{
+    //        console.log("false");    // then we compare it 1 == 0 and the result is false;
+    //    }
+       // The stict equality "===" "!=="
+        var doubleEqualArr = [("42" == 42), ("0" == 0), ("0" == false), ("true" == true), (true ==(1 == "1"))]
+        
+        for(var i in doubleEqualArr){
+            if(doubleEqualArr[i]){
+                console.log(i + " " + doubleEqualArr[i]);
+            }else{
+                console.log(i + " " + doubleEqualArr[i]);
+            }
+        }
+        console.log("----------")
+        var tripleEqualArr = [("42" === 42),("0" === 0),("0" === false),("true" === true),(true === (1 === "1"))]
+        // in tripleEqualArr[3] if we converts "true" to a number in become Nan and if we convert true to a number it become 1 so Nan == 1 is false
+        for(var i in tripleEqualArr){
+            if(tripleEqualArr[i]){
+                console.log(i + " " + tripleEqualArr[i])
+            }else{
+                console.log(i + " " + tripleEqualArr[i])
+            }
+        }
+    </script>
+
+</body>
+</html>

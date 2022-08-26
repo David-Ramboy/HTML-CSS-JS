@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //     phoneNumber = "123 4567"
+    //   function validate(phoneNumber){
+    //       if(phoneNumber.length > 8 || phoneNumber.length < 7){
+    //           console.log("test1")
+    //           return false;         
+    //       } 
+    //       for(var i = 0; i < phoneNumber.length; i++){
+    //         if(i === 3){
+    //             if(phoneNumber.length === 8 && phoneNumber.charAt(i) !== '-'){
+    //                 console.log("test2")
+    //                 return false;
+    //             }else if(phoneNumber.length === 7 && isNaN(phoneNumber.charAt(i))){
+    //                 console.log("test3")
+    //                 return false;
+    //             }
+    //         }else if(isNaN(phoneNumber.charAt(i))){
+    //             console.log("test4")
+    //             return false;
+    //         }
+    //       }
+    //       console.log("test5")
+    //       return true;
+    //   }
+    //   console.log(validate(phoneNumber));
+
+
+    //   phoneNumber = "123 4567"
+      
+    //   function validate(phoneNumber){
+    //     if(phoneNumber.length > 8 || phoneNumber.length < 7){
+    //         console.log("test0")
+    //         return false;
+    //     }
+    //     var first = phoneNumber.substring(0,3);
+    //     var second = phoneNumber.substring(phoneNumber.length - 4);
+
+    //     if(isNaN(first) || isNaN(second)){
+    //         console.log("test1")
+    //         return false;
+    //     }
+
+    //     if(phoneNumber.length === 8){
+    //         console.log("test2")
+    //         return (phoneNumber.charAt(3) === "-");
+    //     }
+    //     console.log("test3")
+    //     return true;
+    //   }
+
+    //   console.log(validate(phoneNumber));
+
+    // var phoneNumber = "123 4567"
+      
+    // function validate(phoneNumber) { 
+    //     return phoneNumber.match(/^\d{3}-?\d{4}$/);
+    // }
+
+    // console.log(validate(phoneNumber));
+    function Duck(sound){
+        this.sound = sound;
+        this.quack = function(){console.log(this.sound);}
+    }
+    var toy = new Duck("quack quack");
+    toy.quack();
+    console.log(typeof toy);
+    console.log(toy instanceof Duck);
+
+    console.log(null == undefined)
+    </script>
+</body>
+</html>

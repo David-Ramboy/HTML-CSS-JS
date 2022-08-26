@@ -1,0 +1,50 @@
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function message(msg){
+            alert(msg);
+        }
+        function clickBtn(){
+            document.getElementById('changetext').innerHTML = "You can do it nothing is imposible.";
+        }
+        function msg(msgs){
+            document.getElementById('date').innerHTML = msgs + "NOW";
+        }
+        function changeTxt(number){
+            document.getElementById('second').innerHTML = number ;
+        }
+    </script>
+</head>
+<body onload="message('Hi! Welcome to your page')" onpageshow="msg(Date())">
+    <h1 id="changetext">h1</h1>
+    <button type="button" onclick="clickBtn()">
+        Welcome
+    </button>
+    <h1 id="date"></h1>
+    <!-- -----practice #2--- -->
+    <div>
+        <button class="button" onclick="changeTxt('First(2) paragraph')">First</button>
+        <button class="button" onclick="changeTxt('Second paragraph')">Second</button>
+    </div>
+    <div>
+        <p class="parg" id="first">Fisrt paragraph</p>
+        <p class="parg" id="second">First paragraph</p>
+        <p class="parg" id="third">Fisrt paragraph</p>
+    </div>
+    <!-- practice #3 -->
+    <div>
+        <button type="button" onclick="document.getElementById('#2').innerHTML = 'hi paragraph' ">First</button>
+        <button type="button" onclick="document.getElementById('#1').innerHTML = 'hello paragraph' ">Second</button>
+    </div>
+    <div>
+        <p class="parg" id="#1">Fisrt paragraph</p>
+        <p class="parg" id="#2">First paragraph</p>
+        <p class="parg" id="#3">Fisrt paragraph</p>
+    </div>
+</body>
+</html>

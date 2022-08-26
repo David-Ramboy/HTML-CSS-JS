@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let p = new Promise(function(resolve,reject){
+        //     let a = 1 + 3;
+        //     if(a == 2){
+        //         resolve("Success")
+        //     }else{
+        //         reject("Failed")
+        //     }
+        // })
+        
+        // p.then(function(message){
+        //     console.log("This is in the then " + message);
+        // }).catch(function (message){
+        //     console.log("This is in the catch " + message);
+        // })
+
+        const userLeft = false;
+        const userWatchingCatMeme = false;
+
+        
+        function watcTutorialPromises(){
+            return new Promise(function(reject,resolve){
+                if(userLeft){
+                resolve({
+                    name: 'User Left',
+                    message: ':('
+                })
+            }else if(userWatchingCatMeme){
+               resolve({
+                    name: 'User Watching Cat Meme',
+                    message: "Websimp < Cat"
+                })
+            }else{
+                reject("Thumbs up and Subscribe")
+            }
+            });
+       
+        }
+
+        watcTutorialPromises().then(
+            function(message)
+            {console.log("Success" + message)
+            }).catch(function(error){console.log(error.name + ' ' + error.message)})
+
+        // function watcTutorialCallback(callback, errorCallback){
+        //     if(userLeft){
+        //         errorCallback({
+        //             name: 'User Left',
+        //             message: ':('
+        //         })
+        //     }else if(userWatchingCatMeme){
+        //         errorCallback({
+        //             name: 'User Watching Cat Meme',
+        //             message: "Websimp < Cat"
+        //         })
+        //     }else{
+        //         callback("Thumbs up and Subscribe")
+        //     }
+        // }
+
+        // watcTutorialCallback(function(message){
+        //     console.log('Success '+ message)
+        // },function (error){console.log(error.name + ' '+ error.message)})
+
+
+        // 1. promise.all 2. promise.race
+
+        const recordVideoOne =  new Promise(function(resolve,reject){
+            resolve("Video 1 Recorded");
+        })
+
+        const recordVideoTwo =  new Promise(function(resolve,reject){
+            resolve("Video 2 Recorded");
+        })
+
+        const recordVideoThree =  new Promise(function(resolve,reject){
+            resolve("Video 3     Recorded");
+        })
+
+        // Promise.all([
+        //     recordVideoOne,
+        //     recordVideoTwo,
+        //     recordVideoThree
+        // ]).then(function(messages){
+        //     console.log(messages);
+        // })
+
+        Promise.race([
+            recordVideoOne,
+            recordVideoTwo,
+            recordVideoThree
+        ]).then(function(messages){
+            console.log(messages);
+        })
+        
+    </script>
+</body>
+</html>

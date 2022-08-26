@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function booksList(numbers, quantity){
+        //     console.log("the number of books ordered i:" + numbers);
+        //     console.log("The total of books remain is:" + quantity);
+        // }
+        // booksList(4, 100 - 4);
+    //  ========= calculating circle using return
+     
+
+    //    function calculateArea(r){
+    //        var area; 
+    //        if( r <= 0){
+    //            return 0;
+    //        }else{
+    //            area = Math.PI * r * r;
+    //             return area;
+    //        }
+           
+    //    }
+    //    var theArea =  calculateArea(5.2);
+    //    console.log("The area is: " + theArea);
+
+    // 
+    var avatar = "generic";
+    var skill = 1.0;
+    var pointsPerlevel = 2999;
+    var userPoints = 2008;
+
+    function getAvatar(points){
+        var level = points / pointsPerlevel;
+
+        if (level == 0.5){
+            return "Teddy bear";
+        } else if(level == 1){
+            return "Cat";
+        } else if (level >= 2){
+            return "Gorilla";    
+        }
+    }
+    function updatePoints(bonus, newPoints){
+        var i = 0;
+        while (i < bonus){
+            newPoints = newPoints + skill * bonus;
+            i = i + 1;
+        }
+        return newPoints + userPoints;
+    }
+    userPoints = updatePoints(2,100);
+    avatar = getAvatar(2112)
+    </script>
+</body>
+</html>

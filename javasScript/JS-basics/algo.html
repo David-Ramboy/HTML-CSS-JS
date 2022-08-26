@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function filterArray(arr){
+            var test = arr.filter(e => e % 2 === 0)
+            return test
+        }
+        console.log(filterArray([1,2,3,4,5,6,7,8]));
+
+        // Return an array of its values plus the values index
+
+        function selfPlusIndex(array){
+            const newArray = array.map((item, i) => item + i)
+        }
+
+        console.log(selfPlusIndex([2,3,4]))
+    
+        //Shuffle  an array of integers 
+
+        function shuffle(array){
+            let currentIndex = array.length
+            let tempvalue, randomIndex
+
+            while(currentIndex != 0){
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex--
+
+                tempvalue = array[currentIndex];
+                array[currentIndex] = array[randomIndex];
+                array[randomIndex] = tempvalue;
+            }
+            return array
+        }
+
+        console.log(shuffle([1,2,3,4,5,6,7,8,9,10]))
+
+        // Recursion
+        function fibonacci(n){
+            if(n === 0|| n === 1){
+                return 1;
+            }else{
+                return (fibonacci(n-1) + fibonacci(n-2));
+            }
+        }
+
+        for(var i = 0; i < 10; i++){
+            console.log("The fibonacci of " + i + " is " + fibonacci(i));
+        }
+
+        fibonacci(0,1,1,2,3,5,8,13,21,34,55)
+
+        // Json
+        var fidoString = '{"name": "Fido", "breed": "Mixed", "weight": 38}';
+
+        var fido = JSON.parse(fidoString);
+
+        console.log(fidoString);
+        console.log(fido);
+
+        var fidoString2 = {"name": "Fido", "breed": "Mixed", "weight": 38};
+        var fido = JSON.stringify(fidoString2);
+
+        console.log(fidoString2)
+        console.log(fido)
+
+
+    </script>
+</body>
+</html>

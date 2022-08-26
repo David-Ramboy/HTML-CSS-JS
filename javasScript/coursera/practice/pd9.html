@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #nick-2{
+            display: none;
+        }
+    </style>
+    
+</head>
+<body>
+    <form>
+       
+            <label for="fname">Firstname:</label>
+            <input type="text" name="fname" id="fname" ><br>
+            <label for="lname">lastname:</label>
+            <input type="text" name="fname" id="lname" ><br>
+      
+            <label for="nicename">Nickname?</label>
+            <input type="checkbox" id="nicename" name="nicename" value="yes" onchange="show()"><br>
+    
+        <div id="nick-2">
+            <label for="entern">Please enter your nickname:</label>
+            <input type="text" name="entern" id="entern">
+        </div><br>
+        <input type="submit" value="verify">
+    </form>
+    <script>
+        function show(){
+            if(document.getElementById('nicename').checked){
+                document.getElementById('nick-2').style.display="inline-block";
+                document.getElementById('entern').setAttribute('required',true)
+            }
+            else{
+                document.getElementById('entern').removeAttribute('required');
+                document.getElementById('nick-2').style.display="none";
+            }
+        }
+    </script>
+</body>
+</html>

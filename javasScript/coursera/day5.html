@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #parg{
+        background-color: rgb(181, 177, 177);
+        outline: solid;
+    }
+    .close{
+        display:none;
+    }
+    .open{
+        display: block;
+    }
+    </style>
+    <script>
+        // function openMe(){
+        //     //--------find the element -- ---
+        //     x=document.getElementById('parg');
+        //     // Option1: Change the class attribute directly
+        //     // x.style.display="block";
+        //     //Option2: Change  the class
+        //     x.className="open";
+        // }
+        // function closeMe(){
+        //     //--------find the element -- ---
+        //     x=document.getElementById('parg');
+        //     // Option1: Change the class attribute directly
+        //     // x.style.display="none"; 
+        //     //Option2: Change  the class
+        //     x.className="close";
+
+        // }
+    </script>
+</head>
+<body>
+    <!-- <div>
+        <button type="button" onclick="openMe()">Open</button>
+        <button type="button" onclick="closeMe()">Close</button>
+    </div> -->
+    <p id="parg" onclick = "console.log(this.innerHTML)">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias debitis molestiae reprehenderit et eligendi quaerat quisquam! Nihil sint earum quia dicta? Velit, animi odit eius accusamus magnam tempore temporibus ab!</p>
+
+    <!-- using this method -->
+    <img src="../../Pictures/4.png" alt="awesome picture"  style=" max-width: 100%; height: 200px;"  onclick="console.log(this.alt)">
+    
+    <!-- part 2 -->
+    <img src="../../Pictures/city.jpg" style=" max-width: 100%; height: 200px; display:block;" alt="awesome city" onclick="displayId(this)" id="id-1">
+
+    <p onclick="displayId(this)" id="id-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, earum!</p>
+    <script>
+        function displayId(element){
+            console.log(element.id);
+        }
+    </script>
+</body>
+</html>

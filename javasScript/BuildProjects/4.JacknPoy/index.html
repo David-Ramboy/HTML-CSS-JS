@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jack N Poy!</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="JnP.js" defer></script>
+</head>
+<body>
+    <div class="gameBoard">
+        <div class="imageBoard">
+            <div class="result">Result:</div>
+
+            <div class="Player1">
+                <img src="" class="p1" alt="">
+            </div>
+            <div class="Player2">
+                <img src="  " class="p2" alt="">
+            </div>
+        </div>
+        <div class="btns">
+            <button class="p1btn">Player1</button>
+            <button class="randombtn">Random</button>
+            <button class="p2btn">Player2</button>
+        </div>
+        
+        <form  data-choices1 class="choices">
+            <p>Player1</p>
+            <input type="radio" id="rock" name="JacknPoy" value="Rock">
+            <label for="rock">Rock</label>
+            <input type="radio" id="paper" name="JacknPoy" value="Paper">
+            <label for="paper">Paper</label>
+            <input type="radio" id="scissor" name="JacknPoy" value="Scissor">
+            <label for="scissor">Scissor</label>
+        </form>
+        <form data-choices2 class="choices2">
+            <p>Player2</p>
+            <input type="radio" id="rock2" name="JacknPoy" value="Rock">
+            <label for="rock2">Rock</label>
+            <input type="radio" id="paper2" name="JacknPoy" value="Paper">
+            <label for="paper2">Paper</label>
+            <input type="radio" id="scissor2" name="JacknPoy" value="Scissor">
+            <label for="scissor2">Scissor</label>
+        </form>
+    </div>
+   
+</body>
+</html>

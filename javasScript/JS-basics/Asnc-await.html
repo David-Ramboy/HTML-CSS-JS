@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function makeRequest(location){
+            return new Promise(function(resolve,reject){
+                console.log(`Making Request to ${location}`)
+              
+                if(location === 'Google'){
+                resolve('Google says hi')
+                }else{
+                reject('We can only talk to Google')
+            }
+            })
+        }
+        
+        function processRequest(response){
+            return new Promise(function(resolve,reject){
+                console.log('Processing response')
+                resolve(`Extra Information + ${response}`)
+            })
+        }
+
+        makeRequest('Google').then(function(response){
+            console.log('Response Receive')
+            return processRequest(response)
+        }).then(function(processResponse){
+            console.log(processResponse)
+        }).catch(function(err){
+            console.log(err)
+        })
+
+        // async function doWork(){
+        //     try{
+        //         const response = await makeRequest('Google')
+        //         console.log('Response Received');
+        //         const  processResponse = await processRequest(response);
+        //         console.log(processResponse)
+        //     }catch(err){
+        //         console.log(err)
+                
+        //     }
+        // }
+        // doWork()
+
+        function codingTodayPromise(message){
+            console.log("Are you coding today?")
+            return new Promise(function(resolve,reject){
+                if(message == "Yes"){
+                    resolve("Great! Start coding.")
+                }else(
+                    reject("This guy will not become programmer")
+                )
+            })
+        }
+
+        function processingRequest(response2){
+            return new Promise(function(resolve, reject){
+                console.log("morning")
+                resolve('hey' + response2)
+            })
+
+            
+        }
+
+        codingTodayPromise("Yes").then(function(message){
+            console.log(message)
+            return processingRequest(message)
+        }).then(function(message){
+            console.log(message)
+        })
+
+
+
+        function sleepNow(message){
+            return new Promise(function(resolve,reject){
+                console.log('Its 9pm are going to sleep?')
+                if(message == "Yes"){
+                    resolve("Goodnight")
+                }else{
+                    reject("You will be late tomorrow")
+                }
+            })
+        }
+        
+        function processSleep(response){
+            return new Promise(function(resolve){
+                resolve("Play lulabi " + response)
+            })
+        }
+
+        sleepNow("Yes").then(function(message){
+            console.log("Ok, " + message)
+            return(processSleep(message))
+        }).then(function(message){
+            console.log(message)
+        })
+    </script>
+</body>
+</html>

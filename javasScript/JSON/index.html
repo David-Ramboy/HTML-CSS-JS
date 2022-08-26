@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul></ul>
+    <script>
+        let companies = [
+    {
+        "name":"BIg Corporation",
+        "numberOfEmployees": 1000,
+        "ceo": "Mary",
+        "rating": 3.6
+    },
+    {
+        "name":"Small Start up",
+        "numberOfEmployees": 3,
+        "ceo": "null",
+        "rating": 4.6
+    }
+]
+// console.log(JSON.parse(companies)) // string to object
+// console.log(JSON.stringify(companies)) // object to string
+
+
+//     const user = {
+//     "name" : "David",
+//     "age":29,
+//     "isProgrammer" : true,
+//     "skills" : ["HTML", "CSS", "Javascript"],
+//     "address" : {
+//         "city" : "Rizal",
+//         "state" : "Binangonan",
+//         "Country" : "Philippines"
+//     }
+
+// }
+// console.log(user.skills[0])
+// console.log(user.address.state)
+
+// ---------Using fetch to not hardcoding the json into  object literal
+    let list = ""
+    fetch("users.json")
+    .then(response => response.json())  
+    .then(json => {
+        console.log(json)
+    })  
+
+    </script>
+</body>
+</html>

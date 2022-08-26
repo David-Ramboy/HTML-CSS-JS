@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var fly = function(num){
+        //     for(i = 0; i < num; i++){
+        //         console.log("Oh ahoy this is the second way to declare a function")
+        //     }
+        // }
+        // fly(2);
+        var winner = function(){console.log("winner")};
+        var loser = function(){console.log ("loser")};
+            winner();
+            //
+            var a = winner;
+            var b = loser;
+            var c = loser;
+            //
+            a();
+            b();
+            //
+            c = a;
+            a = b;
+            b = c;
+            c = a;
+            a = c;
+            a = b;
+            b = c;
+            a();
+    </script>
+</body>
+</html>

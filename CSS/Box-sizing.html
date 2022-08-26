@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *, *::before, *::after{
+        box-sizing:inherit;
+        padding: 0;
+    }
+    html{
+        box-sizing: border-box;
+        color: white;
+    }
+    body{
+        margin: 0;
+    }
+    .box{
+        border: 1px solid black;
+        margin-top: 10px;
+        
+        
+    }
+    .top{
+        background-color: blue;
+        margin:0;
+        width: 200px;
+    }
+    .space{
+        height: 50px;
+        background-color: rgb(7, 5, 36);
+        width: 200px;
+        
+    }
+    .below{
+        background-color: blueviolet;
+        margin: 0;
+        width: 200px;
+    }
+    .box-1 > .top{
+        box-sizing: content-box;
+        border: 5px solid black;
+        
+    }
+    .box-2 > .top{
+        border: 5px solid black;
+    }
+    .box-1 > .space{
+        padding: 10px;
+    }
+</style>
+<body>
+    <div class="box box-1">
+        <p class="top">top</p>
+        <div class="space">
+            content-box
+        </div>
+        <p class="below">below</p>
+    </div>
+    
+    <div class="box box-2">
+        <p class="top">top</p>
+        <div class="space">
+            border-box
+        </div>
+        <p class="below">below</p>
+    </div>
+</body>
+</html>

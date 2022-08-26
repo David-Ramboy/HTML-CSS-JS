@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //memoization is when the execution takes longer the see the result in conclusion we have to use a variable to store 
+        //what current/ or predicted data which we the result we based on that stored data not the execution
+
+        
+        // const prevValues = [];
+
+        // function square(n){
+        //     if(prevValues[n] != null){
+        //         return prevValues[n]
+        //     }
+        //     let result = 0
+        //     for(let i = 1;i <= n; i++){
+        //         for(let j = 1; j <= n; j++){
+        //             result += 1
+        //         }
+        //     }
+        //     prevValues[n] = result
+        //     console.log(prevValues[n], true)
+        //     console.log(result)
+        // }
+
+        // console.log(square(3000))
+        // console.log(square(3000))
+        // console.log(square(3000))
+
+        // without memoization
+
+        // function fib(n){
+        //     if(n <= 2){
+        //         return 1
+        //     } else {
+        //         return fib(n - 1) + fib(n - 2) 
+        //     }
+        // }
+
+        // with memoization
+        function fib(n, prevValues = []){
+            if(prevValues[n] != null){
+                return prevValues[n]
+            }
+            let result
+            if(n <= 2){
+                result = 1;
+            }else{
+                result = fib(n-1, prevValues) + fib(n-2, prevValues);
+            }
+            prevValues[n] = result
+            return result
+        }
+
+        console.log(fib(100))
+
+    </script>
+</body>
+</html>

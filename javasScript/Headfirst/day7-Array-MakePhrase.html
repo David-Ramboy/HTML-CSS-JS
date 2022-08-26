@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ===========array==========
+        // var scores=[49,44,66,77,44,11]
+        // var solution=scores[0];
+        // alert("david score "+ solution);
+        // ===============================
+        // var products = ["Choo Choo Chocolate","Icy Mint","Cake Batter","Bubblegum"];
+        
+        // var recent = products[products.length - 2];
+        // alert(recent);
+        // ==========================
+        function makePhrases(){
+            var words1 = ["24/7","multi-tier","30,000foot","B-to-B","win-win"];
+            var words2 = ["empowered","value-added","oriented","focused","aligned"];
+            var words3 = ["process","solution","tipping-point","strategy","vision"];
+
+            var rand1 = Math.floor(Math.random() * words1.length);
+            var rand2 = Math.floor(Math.random() * words2.length);
+            var rand3 = Math.floor(Math.random() * words3.length);
+
+            var phrase = words1[rand1] + " " + words2[rand2] + " " + words3[rand3];
+            alert(phrase);
+        }
+        makePhrases();
+       
+
+
+    </script>
+</body>
+</html>

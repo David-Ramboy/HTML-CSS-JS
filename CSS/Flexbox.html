@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        *{
+            padding: 0;
+            margin:0;
+        }
+        html, body{
+           
+            height: 100%;
+        }
+        .container{
+            display: flex;
+            flex-direction: row; /*row, row-reverse, column, column-reverse*/
+            flex-wrap: nowrap; /*nowrap, wrap, wrap-reverse*/
+            background-color: aqua;
+            justify-content: flex-start;/*flex-start, flex-end, center, space-around, space-between, space-evenly*/
+
+        }
+        .container > p{
+            border: 1px solid crimson;
+            width: 50px;
+            background-color: cadetblue;
+            padding-left: 10px;
+           
+        }
+        .five{
+            /*margin-left: auto; positioning items*/ 
+            /*flex: 2;*/ /*flex-grow flex-shrink flex-basis*/
+        }
+        .container > .one, .two{
+            flex:1;
+        }
+        .container > .eight, .nine{
+            flex: 1;
+        } 
+        .section2{
+            border: 2px solid black;
+            
+            display: flex;
+            /*align-items: center; flex-start, flex-end, center, space-around, space-between, space-evenly*/
+            /*justify-content: flex-start;flex-start, flex-end, center, space-around, space-between, space-evenly
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+            flex-wrap: wrap;*/
+        }
+       
+        .section2 p:first-child{
+            background-color: blueviolet;
+
+                        
+        }
+        .section2 p:nth-of-type(2){
+            background-color: burlywood;
+            
+        }
+        .section2 p:last-child{
+            background-color:chartreuse;
+            
+        }
+        .section2 > p{
+            margin: 0%;
+            width: 300px; 
+        }
+        .section2 > p{
+          
+        }
+        .onep{
+           
+            /*flex-grow: 1; /* how grow faster within the width of element
+            flex-shrink: 1; /*shrink less than of the with of the items higher the quicker
+            flex-basis: 400px; /*the how much width of an element px, %*/
+            order:3;
+        }
+        .twop{
+            order: 2;
+        }
+        .threep{
+            order: 1;
+           /*flex-grow: 10;
+            flex-shrink: 10;
+            flex-basis: 400px;*/
+        }
+        a:active{
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+        <p class="one">1</p>
+        <p class="two">2</p>
+        <p class="three">3</p>
+        <p class="four">4</p>
+        <p class="five">5</p>
+        <p class="six">6</p>
+        <p class="seven">7</p>
+        <p class="eight">8</p>
+        <p class="nine">9</p>
+    </div>
+    <div class="section2">
+        <p class="onep"><a href="#">one</a></p>
+        <p class="twop">two</p>
+        <p class="threep">three</p>
+
+    </div>
+    <a href="#">hihihihih</a>
+</body>
+</html>

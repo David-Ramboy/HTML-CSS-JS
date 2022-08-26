@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item1{background-color: aqua; grid-area:header;}
+        .item2{background-color: rgb(15, 173, 226); grid-area:advert;}
+        .item3{
+            
+            background-color: lightcoral;
+            grid-area: content;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+
+        }
+        .item4{background-color: lightgreen;grid-area:footer;}
+        .pag1{
+            margin:0;
+        }
+        .pag2{
+            margin:0;
+        }
+        .container{
+            font-size: 20px;
+            min-height: 300px;
+            width: 100%;
+            background-color: lightgrey;
+            display: grid;
+            grid-template-columns:1fr ;
+            grid-template-rows: 50px auto 1fr auto;
+            
+            column-gap: 20px;
+            row-gap: 20px;
+            grid-template-areas: 
+            "header"
+            "advert"
+            "content"
+            "footer";
+        }
+        
+        @media (min-width: 600px){
+            .container{
+                grid-template-columns:auto 1fr;
+                grid-template-rows:auto 1fr auto;
+                column-gap: 20px;
+                row-gap: 20px;
+                grid-template-areas:
+                    "advert header"
+                    "advert content"
+                    "advert footer";
+            }
+        }
+        @media (min-width: 700px){
+            .container{
+                grid-template-columns:auto 1fr;
+                grid-template-rows:auto 1fr auto;
+                column-gap: 20px;
+                row-gap: 20px;
+                grid-template-areas:
+                    "header header"
+                    "advert content"
+                    "advert footer";
+            }
+        }
+       
+        
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item1">header</div>
+        <div class="item2">advert</div>
+        <div class="item3">
+            <p class="pag1" style="background-color: bisque;">Paragraph</p>
+            <p class="pag2" style="background-color: blueviolet;">Paragraph</p>
+        </div>
+        
+        <div class="item4">footer</div>
+    </div>
+</body>
+</html>

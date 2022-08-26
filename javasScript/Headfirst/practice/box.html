@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var boxArray = [];
+        var boxArray2 = [];
+        var boxArray3 = [];
+        var boxArray4 = [];
+        var boxArray5 = [];
+        var boxes = { boxArray, boxArray2, boxArray3, boxArray4, boxArray5}
+        var boxouter = [
+            boxes.boxArray= new Array(11),
+            boxes.boxArray2= new Array(11),
+            boxes.boxArray3= new Array(11),
+            boxes.boxArray4= new Array(11),
+            boxes.boxArray5= new Array(11)
+        ]
+
+        console.log(boxouter);
+     
+
+        function createBox (boxouter, boxes){
+            var boxinner;
+            for(i = 0; i < boxouter.length ; i++){
+                boxouter[i] = boxes[i];
+                boxes[i] = "1";
+            }
+            return boxinner;
+        }
+
+        var total = createBox(boxouter, boxes)
+        console.log(total)
+
+    </script>
+</body>
+</html>
