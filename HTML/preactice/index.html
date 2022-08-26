@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background-image: url(https://www.teahub.io/photos/full/97-977563_abstract-gaming-background.jpg);
+    background-size: cover;
+    color: #fff;
+}
+
+.registration-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+}
+
+.registration-form h1 {
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 40px 0;
+}
+
+.registration-form p {
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+.registration-form input {
+    font-size: 16px;
+    padding: 10px 10px;
+    width: 100%;
+    border: 0;
+    border-radius: 5px;
+    outline: none;
+}
+
+.registration-form label {
+    font-size: 12px;
+}
+
+.registration-form button {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    margin: 20px 0;
+    padding: 8px 10px;
+    width: 50%;
+    border: 2;
+    border-color: #fff;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+.registration-form button:hover {
+    color: #000;
+    background: #fff;
+}
+.checkbox {
+    border: solid red 1px ;
+    display: flex;
+}
+.checkbox input{
+    border: solid red 1px ;
+    width: initial;
+}
+
+</style>
+<body>
+    <div class="registration-form">
+        <h1>Registration Form</h1>
+        <form action="#" method="post">
+            <p>Full Name:</p>
+            <input type="text" name="fullname" placeholder="Full Name">
+            <p>User Name:</p>
+            <input type="text" name="username" placeholder="User Name">
+            <p>Email:</p>
+            <input type="text" name="email" placeholder="Email">
+            <p>Password:</p>
+            <input type="text" name="password" placeholder="Password">
+            <div class="checkbox"> 
+            <input type="checkbox"><span> clicking Register, you agree to our Terms & Conditions</span>.
+            </div>
+            <button type="submit">Register</button>
+
+        </form>
+    </div>
+</body>
+</html>

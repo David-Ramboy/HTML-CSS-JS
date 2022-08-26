@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bry</title>
+    <style>
+        body{
+            background-color:#95e5e8;
+            margin: 0;
+            padding: 0;
+        }
+        div > section > div > p{
+            color:blue;
+        }
+        div > section > h3{
+            background-color: coral;
+        }
+        div > section h3{
+            background-color: coral;
+        }
+        .chil p:first-child{
+            color: coral;
+        }
+        .chil:hover{
+           color: darksalmon;
+        }
+        .chil{
+            width: 100%;
+            background-color: darkgray;
+        }
+        .chil div~p{
+            color: darkgreen;
+        }       
+        .nav ul, footer     {
+            background-color: teal;
+            width: 100%;
+            height: 50px;
+            list-style: none;
+            display: flex;
+            /*justify-content: center;*/
+            padding-left: 0;
+            line-height: 50px;
+
+
+        }
+        .nav ul{
+            margin-top: 0;
+        }
+        .nav ul li{
+            
+            background-color: violet;
+            width: 100px;
+        }
+        .nav li:hover{
+            background-color: tomato;
+        }
+        footer p{
+            padding-left: 20px;
+            line-height: 100%;
+        }
+        #head{
+            width: 100%;
+            text-align: center;
+        }
+        .list1{
+            background-color: thistle;
+           
+        }
+        .list1 li {
+            margin-left: 45%;
+            text-align: initial;
+        }
+        .dev_img{
+            width: 200px;
+            height: auto;
+        }
+        .about_me2{
+            display: flex;
+            flex-flow: row wrap; 
+            justify-content: space-around;  
+            width: 100%;
+            
+            
+            
+        }
+      
+        .sec_1{
+            width: 50%;
+            font-size: 25px;
+           
+            
+            
+        }
+        .sec_2{
+            width: 500px;
+           
+        }
+        .sec_2 ul{
+            background-color: aquamarine;
+            
+            border-radius: 10px;
+            border: 1px solid black;
+        }
+        .sec_2 h4{
+            text-align: center;
+        }
+       
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <ul>
+            <li>About</li>
+            <li>Home</li>
+            <li>Next</li>
+        </ul>
+    </nav>
+    <header id="head">
+        <div class="chil">
+            <div>saddas</div>
+            <p>This is my website to practices on</p>
+            <h3>fasdfasdfsd</h3>
+            <h4>adfasiod</h4>
+            <p>hi jdiiaos</p>
+            <p>dafsdfsadfsa</p>
+            <code>dsasdf</code>
+            <p>dsafasdfasd</p>
+        </div>
+        <img class="dev_img" src="C:\Users\david\Pictures\Saved Pictures\dev.jpg">
+        <h4>About</h4>
+        <ol class="list1">
+            <li>I like Playing video games</li> 
+            <!--Nest list-->
+            <ol>
+                <li>this are games</li>
+            </ol>
+            <li>I like coding</li>
+            <li>I like learning new things</li>
+            <li>I like drawings</li>
+        </ol>
+    </header>
+    <div class="about_me2">
+        <section class="sec_1">
+            <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+                Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.
+                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+                Proin pharetra nonummy pede. Mauris et orci. Aenean nec lorem. In porttitor. Donec laoreet nonummy augue. 
+                Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend.
+                Ut nonummy.
+            </p>
+        </section>
+        <section class="sec_2">
+            <h4>This is what i dont like</h4>
+            <ul>
+                <li>Being distructed</li>
+                <!--Image list-->
+                <ol>
+                    <li><img src="1" alt="one"></li>
+                </ol>
+                <li>Being crowded</li>
+                <li>Lies</li>
+                <li>Overthink</li>
+            </ul>
+            
+            <p><img src="1" alt="one"></p>
+            <ul>
+                <li><a href="http://www.google.com">google</a></li>
+                <a href="http://www.google.com"><li>Example</li></a>
+                <!--Email links (https://www.tutorialspoint.com/html/html_email_links.htm)-->
+                <li><a href="mailto:yourname@yoursite.com">Email me here</a></li>
+            </ul>
+            <!--Image as a link-->
+            <a href="http://google.com"><img src="d../Pictures/city.jpg" alt="City"></a>
+            <!--Type selector-->
+        </section>
+    </div>
+    <hr>
+
+    <div>
+        <h1>Hi there</h1>
+        <section>
+            <h3>This is me</h3>
+            <div>
+                <h3>japanese</h3>
+                <p>ohayo</p>
+            </div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+                Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.
+                 Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+                Proin pharetra nonummy pede. Mauris et orci. Aenean nec lorem. In porttitor. Donec laoreet nonummy augue. 
+                Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend.
+                 Ut nonummy.
+            </p>
+        </section>
+    </div>
+    <footer>
+       <p>david bryan</p>
+    </footer>
+     
+</body>
+</html>

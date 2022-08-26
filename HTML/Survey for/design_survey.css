@@ -1,0 +1,101 @@
+
+*{
+    
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+body{
+    display: grid;
+    grid-template-columns: 70%;
+    justify-content: center;
+}
+.container{
+    border: 1px black solid;
+    border-radius: 10px;
+    margin: 40px 0 40px 0;
+}
+.inner-container{
+    padding:20px;
+}
+
+.title{
+    text-align: center;
+    padding: 0 0 10px 0;
+}
+.header>p{
+    padding: 0 0 10px 0;
+}
+.form{
+    margin-bottom: 10px;
+}
+.content-2{
+    margin-bottom: 10px;
+    
+}
+.content-3{
+    margin-bottom: 5px;
+}
+.fieldset-content{
+    margin: 10px 0 10px 10px;
+}
+.inner-checkboxes{
+    padding: 10px 0 10px 10px;
+}
+.checkboxes{
+    padding: 10px 0 10px 10px;
+}
+.drop{
+    margin: 10px 0 10px 10px;
+}
+.inner-fieldset-3{
+    margin: 10px 0 10px 10px;
+}
+.essay, .essay-2, .fieldset-2 > p{
+    display: block;
+}
+.content-footer{
+    display: flex;
+}
+.fieldset{
+    padding: 0 0 0 0;
+    
+}
+.per-2, .per-3, .per-4, .per-5, .per-6{
+    margin-top: 0px;
+}
+.in-per-6-1{
+    margin-top: 10px;
+}
+ .in-per-6-2, .in-per-6-3{
+    margin-top: -10px;
+}
+
+.in-per-6-1,.in-per-6-2, .in-per-6-3{
+
+    padding:0 0 0 18px;
+}
+.button-app{
+    text-align: center;
+}
+
+@media (max-width: 480px){
+
+    .fieldset{
+        
+        background-color: bisque;
+    }
+    .per-4 input{
+        font-size: 10px;
+        width: 100px;
+        flex-grow: 1;
+        flex-basis: 100px;
+    }
+
+}
+@media screen and (min-width: 480px) {
+    body {
+      background-color: lightgreen;
+    }
+  }
